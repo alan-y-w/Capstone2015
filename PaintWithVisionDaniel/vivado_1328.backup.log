@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Tue Feb 17 16:02:59 2015
+# Process ID: 6852
+# Log file: C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/vivado.log
+# Journal file: C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'C:/Users/Amanjit/Desktop/ECE532_git/board_repository', nor could it be found using path 'C:/Users/Daniel/Documents/Uoft_hw/ECE532/board_repository'.
+CRITICAL WARNING: [Project 1-474] The board_part definition was not found for 'digilentinc.com:nexys4_ddr:part0:1.1', the project's board_part value will not be set. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.1/data/ip'.
+WARNING: [BD 41-1303] One or more IPs have been locked in the design 'design_1.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+open_project: Time (s): cpu = 00:01:01 ; elapsed = 00:00:50 . Memory (MB): peak = 1051.906 ; gain = 198.414
+close_project
+set_param project.boardPartRepoPaths ../bo
+../bo
+set_param project.boardPartRepoPaths ../board_repository/
+../board_repository/
+open_project C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.1/data/ip'.
+open_project: Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 1051.906 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 17 16:08:01 2015...

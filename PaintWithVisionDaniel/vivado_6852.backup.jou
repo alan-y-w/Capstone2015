@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Tue Feb 17 14:19:18 2015
+# Process ID: 8188
+# Log file: C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/vivado.log
+# Journal file: C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\Amanjit\Desktop\ECE532\PaintWithVisionDaniel\PaintWithVision2.xpr}
+open_bd_design {C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1.bd}
+open_run synth_1 -name netlist_1
+export_hardware [get_files C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1.bd] [get_runs impl_1] -bitstream
+launch_sdk -bit C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1_wrapper.bit -bmm C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1_wrapper_bd.bmm -workspace C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export -hwspec C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml
+launch_sdk -workspace C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export -hwspec C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml
+open_bd_design {C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1.bd}
+launch_sdk -workspace C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export -hwspec C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml
