@@ -1,0 +1,50 @@
+/*
+ * test.c
+ *
+ *  Created on: 2015-02-09
+ *      Author: Amanjit
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xtft.h"
+
+/************************** Constant Definitions ****************************/
+#define DISPLAY_COLUMNS  640
+#define DISPLAY_ROWS     480
+
+volatile unsigned int * ddr = (unsigned int *)0x80000000;
+
+
+
+
+int main()
+{
+	// Write to ddr
+	int value = 0x000000ff;
+	int x,y;
+	/*for(x=0;x<(1<<17);x++){
+		*(ddr+x)=value;
+	}*/
+	for(x=0;x<320;x++){
+		for(y=0;y<320;y++){
+		*(ddr+320*y+x)=value;
+
+	}}
+
+	// Set base address to ddr
+	XTft_Config *tft = XTft_LookupConfig(0);
+	if (tft==NULL){
+		//xil_printf("Bad pointer\r\n");
+	}
+	else{
+		static XTft TftInstance;
+		int status = XTft_CfgInitialize(&TftInstance, tft, tft->BaseAddress);
+		//XTft_ClearScreen(&TftInstance);
+		XTft_SetFrameBaseAddr(&TftInstance, (u32)ddr);
+
+	}
+
+
+	return 0;
+}

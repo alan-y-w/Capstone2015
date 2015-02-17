@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Wed Feb 11 20:57:43 2015
+# Process ID: 6060
+# Log file: C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.runs/synth_1/design_1_wrapper.vds
+# Journal file: C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl
