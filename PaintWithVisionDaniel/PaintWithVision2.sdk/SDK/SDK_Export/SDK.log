@@ -448,3 +448,363 @@ java.lang.NullPointerException
 15:16:02 ERROR : No such port: COM7
 15:27:39 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
 15:33:47 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:20:53 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+20:21:35 ERROR :  License Feature SDK is not available.
+
+20:22:15 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+20:22:45 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+20:23:09 INFO  : Processor reset is completed for microblaze_0
+20:23:09 ERROR : No such port: COM7
+20:24:38 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:24:40 INFO  : Processor reset is completed for microblaze_0
+20:24:41 ERROR : No such port: COM7
+20:24:56 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:24:58 INFO  : Processor reset is completed for microblaze_0
+20:24:58 ERROR : No such port: COM7
+20:25:12 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:25:14 INFO  : Processor reset is completed for microblaze_0
+20:25:14 ERROR : No such port: COM7
+20:25:32 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:25:34 INFO  : Processor reset is completed for microblaze_0
+20:25:34 ERROR : No such port: COM7
+20:26:11 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:26:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:26:25 INFO  : Processor reset is completed for microblaze_0
+20:26:26 ERROR : No such port: COM7
+20:26:41 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+20:26:43 INFO  : Processor reset is completed for microblaze_0
+20:26:43 ERROR : No such port: COM7
+20:28:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+21:30:57 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+21:31:34 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+21:31:45 INFO  : Processor reset is completed for microblaze_0
+21:31:45 ERROR : No such port: COM7
+21:32:16 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:32:18 INFO  : Processor reset is completed for microblaze_0
+21:32:18 ERROR : No such port: COM7
+23:13:47 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+23:14:01 INFO  : Processor reset is completed for microblaze_0
+23:14:01 ERROR : No such port: COM7
+23:14:44 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:14:46 INFO  : Processor reset is completed for microblaze_0
+23:14:46 ERROR : No such port: COM7
+23:15:06 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:15:06 INFO  : Processor reset is completed for microblaze_0
+23:15:07 ERROR : No such port: COM7
+23:15:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:15:26 INFO  : Processor reset is completed for microblaze_0
+23:15:26 ERROR : No such port: COM7
+23:36:38 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+23:36:49 INFO  : Processor reset is completed for microblaze_0
+23:36:49 ERROR : No such port: COM7
+21:07:36 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+21:08:22 INFO  : The hardware specification for project 'hw_platform_0' is different from C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+21:08:23 INFO  : Copied contents of C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml into \hw_platform_0\system.xml.
+21:08:26 INFO  : Updating .bit and .bmm files from XPS's export folder.
+21:09:09 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+21:09:09 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+21:09:09 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+21:09:09 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+21:09:20 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:09:31 INFO  : 
+21:09:32 INFO  : 
+21:09:34 INFO  : 
+21:09:35 INFO  : Updating hardware inferred compiler options for DanDaMan.
+21:09:36 INFO  : Updating hardware inferred compiler options for PaintWithVision_code.
+21:09:37 INFO  : Updating hardware inferred compiler options for test.
+21:09:37 INFO  : Clearing existing target manager status.
+21:10:15 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+21:10:26 INFO  : Processor reset is completed for microblaze_0
+21:10:26 ERROR : No such port: COM7
+21:10:55 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:10:58 INFO  : Processor reset is completed for microblaze_0
+21:10:58 ERROR : No such port: COM7
+21:16:59 INFO  : Inferring section assignments and sizes from elf file: C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\PaintWithVision_code\Debug\PaintWithVision_code.elf
+21:20:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:20:26 INFO  : Processor reset is completed for microblaze_0
+21:27:10 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:27:12 INFO  : Processor reset is completed for microblaze_0
+21:31:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+21:31:22 INFO  : Processor reset is completed for microblaze_0
+21:33:56 INFO  : Processor reset is completed for microblaze_0
+21:34:51 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+21:35:16 INFO  : Processor reset is completed for microblaze_0
+21:42:12 INFO  : Processor reset is completed for microblaze_0
+21:45:19 INFO  : Processor reset is completed for microblaze_0
+21:47:29 INFO  : Processor reset is completed for microblaze_0
+21:53:21 INFO  : Processor reset is completed for microblaze_0
+21:55:36 INFO  : Processor reset is completed for microblaze_0
+22:02:45 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:02:48 INFO  : Processor reset is completed for microblaze_0
+22:06:40 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:08:09 WARN  : Terminating existing sessions on processor microblaze_0
+22:08:12 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Error in Resetting Target
+MicroBlaze is not being clocked. Check if the Clock input to MicroBlaze and its Bus Interfaces are connected properly
+    
+
+	at com.xilinx.sdk.targetmanager.internal.TM.doProcessorReset(TM.java:1134)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runTargetSetup(XilinxAppLaunchConfigurationDelegate.java:351)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.runApplication(XilinxAppLaunchConfigurationDelegate.java:516)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:251)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+22:08:15 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+22:08:27 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+22:09:01 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+22:09:25 INFO  : Processor reset is completed for microblaze_0
+22:12:10 INFO  : Processor reset is completed for microblaze_0
+22:14:25 INFO  : Processor reset is completed for microblaze_0
+22:15:40 INFO  : Processor reset is completed for microblaze_0
+22:22:57 INFO  : Processor reset is completed for microblaze_0
+22:24:48 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:27:00 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:27:08 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:27:10 INFO  : Processor reset is completed for microblaze_0
+22:31:40 INFO  : Processor reset is completed for microblaze_0
+22:33:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+22:33:05 INFO  : Processor reset is completed for microblaze_0
+22:34:05 INFO  : Processor reset is completed for microblaze_0
+22:36:13 INFO  : Processor reset is completed for microblaze_0
+23:29:27 INFO  : Processor reset is completed for microblaze_0
+23:37:23 INFO  : Processor reset is completed for microblaze_0
+23:40:29 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:40:31 INFO  : Processor reset is completed for microblaze_0
+23:48:04 INFO  : Processor reset is completed for microblaze_0
+23:48:31 INFO  : Processor reset is completed for microblaze_0
+23:48:31 ERROR : Port COM18 is already in use.
+23:53:20 INFO  : Processor reset is completed for microblaze_0
+23:56:36 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:56:37 INFO  : Processor reset is completed for microblaze_0
+23:57:09 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:57:19 INFO  : Processor reset is completed for microblaze_0
+23:58:44 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:58:46 INFO  : Processor reset is completed for microblaze_0
+23:59:18 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+23:59:20 INFO  : Processor reset is completed for microblaze_0
+00:00:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:00:35 INFO  : Processor reset is completed for microblaze_0
+00:01:29 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:01:32 INFO  : Processor reset is completed for microblaze_0
+00:02:08 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:02:11 INFO  : Processor reset is completed for microblaze_0
+00:05:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:05:28 INFO  : Processor reset is completed for microblaze_0
+00:19:47 INFO  : Processor reset is completed for microblaze_0
+00:21:11 INFO  : Processor reset is completed for microblaze_0
+00:21:31 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:21:33 INFO  : Processor reset is completed for microblaze_0
+00:22:57 INFO  : Processor reset is completed for microblaze_0
+00:27:57 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+00:27:58 INFO  : Processor reset is completed for microblaze_0
+00:29:18 INFO  : Processor reset is completed for microblaze_0
+00:30:22 INFO  : Processor reset is completed for microblaze_0
+10:10:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:39:46 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+10:40:28 ERROR :  License Feature SDK is not available.
+
+10:41:08 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+10:43:51 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+10:44:21 INFO  : Processor reset is completed for microblaze_0
+10:45:25 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:45:28 INFO  : Processor reset is completed for microblaze_0
+10:45:32 ERROR : Port COM18 is already in use.
+10:52:45 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:52:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+10:53:03 INFO  : Processor reset is completed for microblaze_0
+10:59:47 INFO  : Processor reset is completed for microblaze_0
+11:05:23 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:05:26 INFO  : Processor reset is completed for microblaze_0
+11:07:09 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+11:07:13 INFO  : Processor reset is completed for microblaze_0
+12:38:49 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:140)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:324)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:313)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:206)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+12:38:57 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:40:15 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+12:41:05 INFO  : The hardware specification for project 'hw_platform_0' is different from C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+12:41:06 INFO  : Copied contents of C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml into \hw_platform_0\system.xml.
+12:41:08 INFO  : Updating .bit and .bmm files from XPS's export folder.
+12:42:37 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+12:43:26 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+12:43:26 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+12:43:26 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+12:43:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:43:42 INFO  : 
+12:43:43 INFO  : 
+12:43:45 INFO  : 
+12:43:48 INFO  : Updating hardware inferred compiler options for DanDaMan.
+12:43:49 INFO  : Updating hardware inferred compiler options for PaintWithVision_code.
+12:43:50 INFO  : Updating hardware inferred compiler options for test.
+12:43:50 INFO  : Clearing existing target manager status.
+12:44:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:49:48 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+12:49:51 INFO  : The hardware specification for project 'hw_platform_0' is different from C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+12:49:51 INFO  : Copied contents of C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml into \hw_platform_0\system.xml.
+12:50:49 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+12:50:49 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+12:52:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+12:53:11 INFO  : 
+12:53:12 INFO  : 
+12:53:14 INFO  : 
+12:53:15 INFO  : Updating hardware inferred compiler options for DanDaMan.
+12:53:16 INFO  : Updating hardware inferred compiler options for PaintWithVision_code.
+12:53:17 INFO  : Updating hardware inferred compiler options for test.
+12:53:17 INFO  : Clearing existing target manager status.
+12:55:03 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+12:55:31 INFO  : Processor reset is completed for microblaze_0
+12:55:34 ERROR : Port COM18 is already in use.
+12:57:19 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:57:23 INFO  : Processor reset is completed for microblaze_0
+13:04:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:05:09 INFO  : Processor reset is completed for microblaze_0
+13:06:33 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:06:37 INFO  : Processor reset is completed for microblaze_0
+13:07:50 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:140)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:324)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:313)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:206)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:57)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+13:07:50 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:08:16 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+13:08:20 INFO  : The hardware specification for project 'hw_platform_0' is different from C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+13:08:20 INFO  : Copied contents of C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml into \hw_platform_0\system.xml.
+13:09:32 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper.bit into \hw_platform_0\design_1_wrapper.bit.
+13:10:43 INFO  : Copied contents of C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.sdk\SDK\SDK_Export\hw\design_1_wrapper_bd.bmm into \hw_platform_0\design_1_wrapper_bd.bmm.
+13:12:04 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:13:20 INFO  : 
+13:13:21 INFO  : 
+13:13:23 INFO  : 
+13:13:24 INFO  : Updating hardware inferred compiler options for DanDaMan.
+13:13:25 INFO  : Updating hardware inferred compiler options for PaintWithVision_code.
+13:13:26 INFO  : Updating hardware inferred compiler options for test.
+13:13:26 INFO  : Clearing existing target manager status.
+13:14:06 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+13:15:18 INFO  : Processor reset is completed for microblaze_0
+13:16:02 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:16:04 INFO  : Processor reset is completed for microblaze_0
+13:16:34 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:16:38 INFO  : Processor reset is completed for microblaze_0
+13:45:55 INFO  : Processor reset is completed for microblaze_0
+13:46:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:46:05 INFO  : Processor reset is completed for microblaze_0
+13:48:03 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:48:05 INFO  : Processor reset is completed for microblaze_0
+13:59:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+13:59:57 INFO  : Processor reset is completed for microblaze_0
+14:02:10 INFO  : Processing command line option -hwspec C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw/design_1.xml.
+14:06:53 INFO  : Processor reset is completed for microblaze_0
+14:09:24 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+14:10:03 INFO  : Processor reset is completed for microblaze_0
+16:33:26 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:33:28 INFO  : Processor reset is completed for microblaze_0
+16:33:31 ERROR : Port COM18 is already in use.
+16:45:20 INFO  : Processor reset is completed for microblaze_0
+16:46:54 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:46:56 INFO  : Processor reset is completed for microblaze_0
+16:48:17 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:48:22 INFO  : Processor reset is completed for microblaze_0
+16:50:43 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+16:50:48 INFO  : Processor reset is completed for microblaze_0
+17:01:16 INFO  : Processor reset is completed for microblaze_0
+17:04:18 INFO  : Processor reset is completed for microblaze_0
+17:04:44 INFO  : Processor reset is completed for microblaze_0
+17:11:57 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:11:59 INFO  : Processor reset is completed for microblaze_0
+17:14:12 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+17:14:42 INFO  : Processor reset is completed for microblaze_0
+17:20:29 INFO  : Processor reset is completed for microblaze_0
+17:24:05 INFO  : Processor reset is completed for microblaze_0
+17:24:25 ERROR : Unexpected error while launching program.
+java.lang.RuntimeException: Target request failed: Target is not responding (timed out).
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.debugApplication(XilinxAppLaunchConfigurationDelegate.java:706)
+	at com.xilinx.sdk.debug.core.XilinxAppLaunchConfigurationDelegate.launch(XilinxAppLaunchConfigurationDelegate.java:253)
+	at com.xilinx.sdk.debug.ui.XilinxAppLaunchDelegateWrapper.launch(XilinxAppLaunchDelegateWrapper.java:31)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1047)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1251)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+17:24:48 INFO  : Processor reset is completed for microblaze_0
+17:25:53 INFO  : Processor reset is completed for microblaze_0
+17:27:31 WARN  : Terminating existing sessions on processor microblaze_0
+17:27:35 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+17:27:57 INFO  : Processor reset is completed for microblaze_0
+17:30:34 INFO  : Processor reset is completed for microblaze_0
+17:32:02 INFO  : Processor reset is completed for microblaze_0
+17:34:59 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+17:35:04 INFO  : Processor reset is completed for microblaze_0
+17:43:51 INFO  : Processor reset is completed for microblaze_0
+17:46:51 INFO  : Processor reset is completed for microblaze_0
+17:49:53 INFO  : Processor reset is completed for microblaze_0
+17:51:55 INFO  : Processor reset is completed for microblaze_0
+17:54:04 INFO  : Processor reset is completed for microblaze_0
+17:58:00 INFO  : FPGA configured successfully with bitstream "C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/design_1_wrapper.bit"
+17:58:47 INFO  : Processor reset is completed for microblaze_0
+18:01:37 INFO  : Processor reset is completed for microblaze_0
+18:06:18 INFO  : Processor reset is completed for microblaze_0
+18:08:20 INFO  : Processor reset is completed for microblaze_0
+18:29:20 INFO  : Processor reset is completed for microblaze_0
+18:31:30 INFO  : Processor reset is completed for microblaze_0
+18:35:18 INFO  : Processor reset is completed for microblaze_0
+18:51:33 INFO  : Processor reset is completed for microblaze_0
+18:55:12 INFO  : Processor reset is completed for microblaze_0
+18:58:26 INFO  : Processor reset is completed for microblaze_0
+19:01:14 INFO  : Processor reset is completed for microblaze_0
+19:01:52 INFO  : Processor reset is completed for microblaze_0
+19:03:31 INFO  : Processor reset is completed for microblaze_0
+19:04:30 INFO  : microblaze_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+19:04:32 INFO  : Processor reset is completed for microblaze_0
+19:09:05 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

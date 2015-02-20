@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1423706238">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1424363696">
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
@@ -34,6 +34,7 @@
         <Attr Name="UsedIn" Val="synthesis"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_compositor_0_0/design_1_compositor_0_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>

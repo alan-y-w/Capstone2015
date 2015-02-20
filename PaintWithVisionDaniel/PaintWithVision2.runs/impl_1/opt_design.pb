@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
 X
 
 Starting %s Task
@@ -60,13 +60,13 @@ B
 49*opt2
 02default:defaultZ31-49
 3
-'Phase 1 Retarget | Checksum: 178528da2
+'Phase 1 Retarget | Checksum: 1ce61c7af
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
 l
 
 Phase %s%s
@@ -76,19 +76,19 @@ Phase %s%s
 D
 Pushed %s inverter(s).
 98*opt2
-402default:defaultZ31-138
+432default:defaultZ31-138
 C
 Eliminated %s cells.
 10*opt2
-13562default:defaultZ31-10
+17682default:defaultZ31-10
 ?
-3Phase 2 Constant Propagation | Checksum: 1a7648336
+3Phase 2 Constant Propagation | Checksum: 1254afa65
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
 ]
 
 Phase %s%s
@@ -98,32 +98,32 @@ Phase %s%s
 N
  Eliminated %s unconnected nets.
 12*opt2
-48842default:defaultZ31-12
-O
+61062default:defaultZ31-12
+P
 !Eliminated %s unconnected cells.
-11*opt2
-89702default:defaultZ31-11
+11*opt2
+101532default:defaultZ31-11
 0
-$Phase 3 Sweep | Checksum: 1ee4e013d
+$Phase 3 Sweep | Checksum: 261871a97
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:01:01 ; elapsed = 00:01:02 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
 A
-5Ending Logic Optimization Task | Checksum: 1ee4e013d
+5Ending Logic Optimization Task | Checksum: 261871a97
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:01:02 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
-8
-,Implement Debug Cores | Checksum: 222fb1330
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+7
++Implement Debug Cores | Checksum: f32f649f
 *common
-5
-)Logic Optimization | Checksum: 222fb1330
+4
+(Logic Optimization | Checksum: f32f649f
 *common
 X
 
@@ -140,145 +140,145 @@ $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[0]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Î
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2_
 Idesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[10]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Î
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2_
 Idesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[11]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[1]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[2]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[3]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[4]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[5]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[6]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[7]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[8]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Í
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2^
 Hdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[9]_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 ×
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2h
 Rdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_2	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 ×
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2h
 Rdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_3	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 ×
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2h
 Rdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_4	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 ×
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2h
 Rdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_5	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 Û
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2l
 Vdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_reg_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 ç
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2x
 bdesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_clr_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 æ
 $%s: '%s' is not a valid startpoint.
 402*constraints2!
 set_max_delay2default:default2w
 adesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_en_i_1	2default:default2æ
-Ïc:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
+Ïc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc2default:default2
 3372default:default8@Z18-402
 <
 %Done setting XDC timing constraints.
 35*timingZ38-35
 D
-8Ending PowerOpt TimerUpdates Task | Checksum: 1ee4e013d
+8Ending PowerOpt TimerUpdates Task | Checksum: 261871a97
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1039.418 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -305,13 +305,13 @@ CNumber of BRAM Ports augmented: %s newly gated: %s Total Ports: %s
 02default:default2
 62default:defaultZ34-65
 A
-5Ending Power Optimization Task | Checksum: 1ee4e013d
+5Ending Power Optimization Task | Checksum: 261871a97
 *common
 ‡
 
 %s
 *constraints2p
-\Time (s): cpu = 00:00:00 ; elapsed = 00:00:34 . Memory (MB): peak = 1135.246 ; gain = 95.8282default:default
+\Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 1160.680 ; gain = 97.3242default:default
 Q
 Releasing license: %s
 83*common2"
@@ -332,10 +332,10 @@ opt_design2default:defaultZ4-42
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
-00:01:392default:default2
-00:02:422default:default2
-1135.2462default:default2
-95.8282default:defaultZ17-268
+00:01:092default:default2
+00:02:132default:default2
+1160.6802default:default2
+97.3242default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -350,16 +350,16 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
 00:00:012default:default2
-00:00:022default:default2
-1135.2462default:default2
+00:00:012default:default2
+1160.6802default:default2
 0.0002default:defaultZ17-268
 ÿ
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2&
 write_checkpoint: 2default:default2
-00:00:122default:default2
-00:00:142default:default2
-1135.2462default:default2
+00:00:082default:default2
+00:00:112default:default2
+1160.6802default:default2
 0.0002default:defaultZ17-268
 
 

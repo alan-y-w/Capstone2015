@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb 17 14:28:37 2015" VIVADOVERSION="2014.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Feb 19 13:07:59 2015" VIVADOVERSION="2014.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:nexys4_ddr:part0:1.1" DEVICE="7a100t" NAME="design_1_imp" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -194,7 +194,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_pc" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="intr" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="axi_tft_0_ip2intc_irpt">
+        <PORT DIR="I" NAME="intr" SENSITIVITY="EDGE_RISING" SIGIS="INTERRUPT" SIGNAME="axi_tft_0_ip2intc_irpt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_tft_0" PORT="ip2intc_irpt"/>
           </CONNECTIONS>
@@ -252,8 +252,8 @@
         <PARAMETER NAME="C_MAX_BURST_LEN" VALUE="16"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_axi_tft_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-        <PARAMETER NAME="C_BASEADDR" VALUE="0x44A00000"/>
-        <PARAMETER NAME="C_HIGHADDR" VALUE="0x44A0FFFF"/>
+        <PARAMETER NAME="C_BASEADDR" VALUE="0x44A10000"/>
+        <PARAMETER NAME="C_HIGHADDR" VALUE="0x44A1FFFF"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
@@ -512,7 +512,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m02_couplers_auto_pc" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_tft_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
+        <PORT CLKFREQUENCY="25000000" DIR="I" NAME="sys_tft_clk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out3"/>
           </CONNECTIONS>
@@ -615,15 +615,17 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
+        <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="compositor_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_intc_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x44A10000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A1FFFF" INSTANCE="axi_tft_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x40600000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4060FFFF" INSTANCE="axi_uartlite_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
-        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="axi_tft_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x87FFFFFF" INSTANCE="mig_7series_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="MEMORY"/>
       </MEMORYMAP>
       <PERIPHERALS>
+        <PERIPHERAL INSTANCE="compositor_0"/>
         <PERIPHERAL INSTANCE="axi_intc_0"/>
-        <PERIPHERAL INSTANCE="axi_uartlite_0"/>
         <PERIPHERAL INSTANCE="axi_tft_0"/>
+        <PERIPHERAL INSTANCE="axi_uartlite_0"/>
         <PERIPHERAL INSTANCE="mig_7series_0"/>
       </PERIPHERALS>
       <INTERRUPTINFO TYPE="SOURCE">
@@ -1272,11 +1274,17 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m02_couplers_auto_pc" PORT="aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_pc" PORT="aclk"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="aclk"/>
             <CONNECTION INSTANCE="axi_uartlite_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_tft_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_tft_0" PORT="m_axi_aclk"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="aclk"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="200000000" DIR="O" NAME="clk_out2" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out2">
@@ -1301,6 +1309,296 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/compositor_0" HWVERSION="1.0" INSTANCE="compositor_0" IPTYPE="PERIPHERAL" MODCLASS="PERIPHERAL" MODTYPE="compositor" VLNV="user:user:compositor:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="5"/>
+        <PARAMETER NAME="C_M_AXI_START_DATA_VALUE" VALUE="0xAA000000"/>
+        <PARAMETER NAME="C_M_AXI_TARGET_SLAVE_BASE_ADDR" VALUE="0x40000000"/>
+        <PARAMETER NAME="C_M_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_TRANSACTIONS_NUM" VALUE="4"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_compositor_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_S_AXI_BASEADDR" VALUE="0x44A00000"/>
+        <PARAMETER NAME="C_S_AXI_HIGHADDR" VALUE="0x44A0FFFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="compositor_0_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="compositor_0_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="compositor_0_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="compositor_0_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="compositor_0_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="compositor_0_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="compositor_0_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="compositor_0_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="compositor_0_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="compositor_0_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="compositor_0_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="compositor_0_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="compositor_0_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="compositor_0_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="m_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="compositor_0_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="compositor_0_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="compositor_0_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="compositor_0_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="compositor_0_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="compositor_0_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="compositor_0_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="compositor_0_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="compositor_0_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="compositor_0_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="compositor_0_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="compositor_0_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="compositor_0_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="compositor_0_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="microblaze_0_axi_periph_m04_couplers_auto_ds" NAME="S_AXI" TYPE="SLAVE">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axi_awaddr"/>
+            <PORTMAP PHYSICAL="s_axi_awprot"/>
+            <PORTMAP PHYSICAL="s_axi_awvalid"/>
+            <PORTMAP PHYSICAL="s_axi_awready"/>
+            <PORTMAP PHYSICAL="s_axi_wdata"/>
+            <PORTMAP PHYSICAL="s_axi_wstrb"/>
+            <PORTMAP PHYSICAL="s_axi_wvalid"/>
+            <PORTMAP PHYSICAL="s_axi_wready"/>
+            <PORTMAP PHYSICAL="s_axi_bresp"/>
+            <PORTMAP PHYSICAL="s_axi_bvalid"/>
+            <PORTMAP PHYSICAL="s_axi_bready"/>
+            <PORTMAP PHYSICAL="s_axi_araddr"/>
+            <PORTMAP PHYSICAL="s_axi_arprot"/>
+            <PORTMAP PHYSICAL="s_axi_arvalid"/>
+            <PORTMAP PHYSICAL="s_axi_arready"/>
+            <PORTMAP PHYSICAL="s_axi_rdata"/>
+            <PORTMAP PHYSICAL="s_axi_rresp"/>
+            <PORTMAP PHYSICAL="s_axi_rvalid"/>
+            <PORTMAP PHYSICAL="s_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="microblaze_0_axi_periph_s02_couplers_auto_us" NAME="M_AXI" TYPE="MASTER">
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="m_axi_awaddr"/>
+            <PORTMAP PHYSICAL="m_axi_awprot"/>
+            <PORTMAP PHYSICAL="m_axi_awvalid"/>
+            <PORTMAP PHYSICAL="m_axi_awready"/>
+            <PORTMAP PHYSICAL="m_axi_wdata"/>
+            <PORTMAP PHYSICAL="m_axi_wstrb"/>
+            <PORTMAP PHYSICAL="m_axi_wvalid"/>
+            <PORTMAP PHYSICAL="m_axi_wready"/>
+            <PORTMAP PHYSICAL="m_axi_bresp"/>
+            <PORTMAP PHYSICAL="m_axi_bvalid"/>
+            <PORTMAP PHYSICAL="m_axi_bready"/>
+            <PORTMAP PHYSICAL="m_axi_araddr"/>
+            <PORTMAP PHYSICAL="m_axi_arprot"/>
+            <PORTMAP PHYSICAL="m_axi_arvalid"/>
+            <PORTMAP PHYSICAL="m_axi_arready"/>
+            <PORTMAP PHYSICAL="m_axi_rdata"/>
+            <PORTMAP PHYSICAL="m_axi_rresp"/>
+            <PORTMAP PHYSICAL="m_axi_rvalid"/>
+            <PORTMAP PHYSICAL="m_axi_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+      <MEMORYMAP>
+        <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="compositor_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_intc_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x44A10000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A1FFFF" INSTANCE="axi_tft_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x40600000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4060FFFF" INSTANCE="axi_uartlite_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x87FFFFFF" INSTANCE="mig_7series_0" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="MEMORY"/>
+      </MEMORYMAP>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="compositor_0"/>
+        <PERIPHERAL INSTANCE="axi_intc_0"/>
+        <PERIPHERAL INSTANCE="axi_tft_0"/>
+        <PERIPHERAL INSTANCE="axi_uartlite_0"/>
+        <PERIPHERAL INSTANCE="mig_7series_0"/>
+      </PERIPHERALS>
     </MODULE>
     <MODULE FULLNAME="/mdm_1" HWVERSION="3.1" INSTANCE="mdm_1" IPTYPE="PERIPHERAL" MODCLASS="DEBUG" MODTYPE="mdm" VLNV="xilinx.com:ip:mdm:3.1">
       <DOCUMENTS>
@@ -1914,18 +2212,20 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
+        <MEMRANGE BASENAME="C_S_AXI_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_S_AXI_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="compositor_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x41200000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4120FFFF" INSTANCE="axi_intc_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="REGISTER"/>
-        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x44A00000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A0FFFF" INSTANCE="axi_tft_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="REGISTER"/>
-        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x87FFFFFF" INSTANCE="mig_7series_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="MEMORY"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x44A10000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x44A1FFFF" INSTANCE="axi_tft_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="REGISTER"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x40600000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x4060FFFF" INSTANCE="axi_uartlite_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="REGISTER"/>
+        <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x80000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x87FFFFFF" INSTANCE="mig_7series_0" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="MEMORY"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00001FFF" INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr" IS_DATA="TRUE" IS_INSTRUCTION="FALSE" MEMTYPE="MEMORY"/>
         <MEMRANGE BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x00001FFF" INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr" IS_DATA="FALSE" IS_INSTRUCTION="TRUE" MEMTYPE="MEMORY"/>
       </MEMORYMAP>
       <PERIPHERALS>
+        <PERIPHERAL INSTANCE="compositor_0"/>
         <PERIPHERAL INSTANCE="axi_intc_0"/>
         <PERIPHERAL INSTANCE="axi_tft_0"/>
-        <PERIPHERAL INSTANCE="mig_7series_0"/>
         <PERIPHERAL INSTANCE="axi_uartlite_0"/>
+        <PERIPHERAL INSTANCE="mig_7series_0"/>
         <PERIPHERAL INSTANCE="microblaze_0_local_memory_dlmb_bram_if_cntlr"/>
         <PERIPHERAL INSTANCE="microblaze_0_local_memory_ilmb_bram_if_cntlr"/>
       </PERIPHERALS>
@@ -2864,7 +3164,7 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="m_axi_aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
+        <PORT CLKFREQUENCY="81000000" DIR="I" NAME="m_axi_aclk" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
           </CONNECTIONS>
@@ -4463,6 +4763,724 @@
         </PORT>
       </PORTS>
     </MODULE>
+    <MODULE FULLNAME="/microblaze_0_axi_periph/m04_couplers/auto_ds" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_dwidth_converter" VLNV="xilinx.com:ip:axi_dwidth_converter:2.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SUPPORTS_ID" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_M_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_WRITE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_READ" VALUE="1"/>
+        <PARAMETER NAME="C_FIFO_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ACLK_RATIO" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXI_ACLK_RATIO" VALUE="2"/>
+        <PARAMETER NAME="C_AXI_IS_ACLK_ASYNC" VALUE="0"/>
+        <PARAMETER NAME="C_MAX_SPLIT_BEATS" VALUE="256"/>
+        <PARAMETER NAME="C_PACKING_LEVEL" VALUE="1"/>
+        <PARAMETER NAME="C_SYNCHRONIZER_STAGE" VALUE="3"/>
+        <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="PACKING_LEVEL" VALUE="1"/>
+        <PARAMETER NAME="SI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="MI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="SI_ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="MAX_SPLIT_BEATS" VALUE="256"/>
+        <PARAMETER NAME="FIFO_MODE" VALUE="0"/>
+        <PARAMETER NAME="ACLK_ASYNC" VALUE="0"/>
+        <PARAMETER NAME="SYNCHRONIZATION_STAGES" VALUE="3"/>
+        <PARAMETER NAME="ACLK_RATIO" VALUE="1:2"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_ds_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_interconnect_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="interconnect_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="m_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+    </MODULE>
+    <MODULE FULLNAME="/microblaze_0_axi_periph/m04_couplers/auto_pc" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_protocol_converter" VLNV="xilinx.com:ip:axi_protocol_converter:2.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_M_AXI_PROTOCOL" VALUE="2"/>
+        <PARAMETER NAME="C_S_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_IGNORE_ID" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_WRITE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_READ" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_USER_SIGNALS" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_AWUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ARUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_WUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_RUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_BUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_TRANSLATION_MODE" VALUE="2"/>
+        <PARAMETER NAME="SI_PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="MI_PROTOCOL" VALUE="AXI4LITE"/>
+        <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+        <PARAMETER NAME="TRANSLATION_MODE" VALUE="2"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_pc_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_interconnect_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="interconnect_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="m_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="compositor_0_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="compositor_0_s_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="compositor_0_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="compositor_0_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="compositor_0_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="compositor_0_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="compositor_0_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="compositor_0_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="compositor_0_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="compositor_0_s_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="compositor_0_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="compositor_0_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="compositor_0_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="compositor_0_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="compositor_0_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+    </MODULE>
     <MODULE FULLNAME="/microblaze_0_axi_periph/s00_couplers/auto_pc" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_pc" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_protocol_converter" VLNV="xilinx.com:ip:axi_protocol_converter:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
@@ -4496,7 +5514,7 @@
         <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_pc_3"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_pc_4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -5540,49 +6558,759 @@
         </PORT>
       </PORTS>
     </MODULE>
-    <MODULE FULLNAME="/microblaze_0_axi_periph/xbar" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_xbar" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
+    <MODULE FULLNAME="/microblaze_0_axi_periph/s02_couplers/auto_pc" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_protocol_converter" VLNV="xilinx.com:ip:axi_protocol_converter:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
-        <PARAMETER NAME="C_NUM_SLAVE_SLOTS" VALUE="2"/>
-        <PARAMETER NAME="C_NUM_MASTER_SLOTS" VALUE="4"/>
+        <PARAMETER NAME="C_M_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_PROTOCOL" VALUE="2"/>
+        <PARAMETER NAME="C_IGNORE_ID" VALUE="1"/>
         <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_ADDR_RANGES" VALUE="1"/>
-        <PARAMETER NAME="C_M_AXI_BASE_ADDR" VALUE="0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"/>
-        <PARAMETER NAME="C_M_AXI_ADDR_WIDTH" VALUE="0x00000000000000000000000000000000"/>
-        <PARAMETER NAME="C_S_AXI_BASE_ID" VALUE="0x0000000100000000"/>
-        <PARAMETER NAME="C_S_AXI_THREAD_ID_WIDTH" VALUE="0x0000000000000000"/>
+        <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_WRITE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_READ" VALUE="1"/>
         <PARAMETER NAME="C_AXI_SUPPORTS_USER_SIGNALS" VALUE="0"/>
         <PARAMETER NAME="C_AXI_AWUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_WUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_AXI_BUSER_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_M_AXI_WRITE_CONNECTIVITY" VALUE="0x00000003000000030000000300000003"/>
-        <PARAMETER NAME="C_M_AXI_READ_CONNECTIVITY" VALUE="0x00000003000000030000000300000003"/>
+        <PARAMETER NAME="C_TRANSLATION_MODE" VALUE="2"/>
+        <PARAMETER NAME="SI_PROTOCOL" VALUE="AXI4LITE"/>
+        <PARAMETER NAME="MI_PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+        <PARAMETER NAME="TRANSLATION_MODE" VALUE="2"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_pc_5"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="compositor_0_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="compositor_0_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="compositor_0_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="compositor_0_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="compositor_0_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="compositor_0_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="compositor_0_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="compositor_0_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="compositor_0_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="compositor_0_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="compositor_0_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="compositor_0_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="compositor_0_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="compositor_0_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="compositor_0_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+    </MODULE>
+    <MODULE FULLNAME="/microblaze_0_axi_periph/s02_couplers/auto_us" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_dwidth_converter" VLNV="xilinx.com:ip:axi_dwidth_converter:2.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SUPPORTS_ID" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_WRITE" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_READ" VALUE="1"/>
+        <PARAMETER NAME="C_FIFO_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXI_ACLK_RATIO" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXI_ACLK_RATIO" VALUE="2"/>
+        <PARAMETER NAME="C_AXI_IS_ACLK_ASYNC" VALUE="0"/>
+        <PARAMETER NAME="C_MAX_SPLIT_BEATS" VALUE="16"/>
+        <PARAMETER NAME="C_PACKING_LEVEL" VALUE="1"/>
+        <PARAMETER NAME="C_SYNCHRONIZER_STAGE" VALUE="3"/>
+        <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+        <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="PACKING_LEVEL" VALUE="1"/>
+        <PARAMETER NAME="SI_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="MI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="SI_ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="MAX_SPLIT_BEATS" VALUE="256"/>
+        <PARAMETER NAME="FIFO_MODE" VALUE="0"/>
+        <PARAMETER NAME="ACLK_ASYNC" VALUE="0"/>
+        <PARAMETER NAME="SYNCHRONIZATION_STAGES" VALUE="3"/>
+        <PARAMETER NAME="ACLK_RATIO" VALUE="1:2"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_auto_us_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arregion">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arregion"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_pc_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="m_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arregion" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arqos"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_xbar" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+    </MODULE>
+    <MODULE FULLNAME="/microblaze_0_axi_periph/xbar" HWVERSION="2.1" INSTANCE="microblaze_0_axi_periph_xbar" IPTYPE="BUS" MODCLASS="BUS" MODTYPE="axi_crossbar" VLNV="xilinx.com:ip:axi_crossbar:2.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="artix7"/>
+        <PARAMETER NAME="C_NUM_SLAVE_SLOTS" VALUE="3"/>
+        <PARAMETER NAME="C_NUM_MASTER_SLOTS" VALUE="5"/>
+        <PARAMETER NAME="C_AXI_ID_WIDTH" VALUE="2"/>
+        <PARAMETER NAME="C_AXI_ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_AXI_DATA_WIDTH" VALUE="64"/>
+        <PARAMETER NAME="C_AXI_PROTOCOL" VALUE="0"/>
+        <PARAMETER NAME="C_NUM_ADDR_RANGES" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXI_BASE_ADDR" VALUE="0x0000000044a0000000000000412000000000000044a1000000000000800000000000000040600000"/>
+        <PARAMETER NAME="C_M_AXI_ADDR_WIDTH" VALUE="0x0000001000000010000000100000001b00000010"/>
+        <PARAMETER NAME="C_S_AXI_BASE_ID" VALUE="0x000000020000000100000000"/>
+        <PARAMETER NAME="C_S_AXI_THREAD_ID_WIDTH" VALUE="0x000000000000000000000000"/>
+        <PARAMETER NAME="C_AXI_SUPPORTS_USER_SIGNALS" VALUE="0"/>
+        <PARAMETER NAME="C_AXI_AWUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_ARUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_WUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_RUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXI_BUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXI_WRITE_CONNECTIVITY" VALUE="0x0000000700000007000000070000000700000007"/>
+        <PARAMETER NAME="C_M_AXI_READ_CONNECTIVITY" VALUE="0x0000000700000007000000070000000700000007"/>
         <PARAMETER NAME="C_R_REGISTER" VALUE="1"/>
-        <PARAMETER NAME="C_S_AXI_SINGLE_THREAD" VALUE="0x0000000100000001"/>
-        <PARAMETER NAME="C_S_AXI_WRITE_ACCEPTANCE" VALUE="0x0000000100000001"/>
-        <PARAMETER NAME="C_S_AXI_READ_ACCEPTANCE" VALUE="0x0000000100000001"/>
-        <PARAMETER NAME="C_M_AXI_WRITE_ISSUING" VALUE="0x00000001000000010000000100000001"/>
-        <PARAMETER NAME="C_M_AXI_READ_ISSUING" VALUE="0x00000001000000010000000100000001"/>
-        <PARAMETER NAME="C_S_AXI_ARB_PRIORITY" VALUE="0x0000000000000000"/>
-        <PARAMETER NAME="C_M_AXI_SECURE" VALUE="0x00000000000000000000000000000000"/>
+        <PARAMETER NAME="C_S_AXI_SINGLE_THREAD" VALUE="0x000000000000000100000001"/>
+        <PARAMETER NAME="C_S_AXI_WRITE_ACCEPTANCE" VALUE="0x000000010000000100000001"/>
+        <PARAMETER NAME="C_S_AXI_READ_ACCEPTANCE" VALUE="0x000000010000000100000001"/>
+        <PARAMETER NAME="C_M_AXI_WRITE_ISSUING" VALUE="0x0000000100000001000000010000000100000001"/>
+        <PARAMETER NAME="C_M_AXI_READ_ISSUING" VALUE="0x0000000100000001000000010000000100000001"/>
+        <PARAMETER NAME="C_S_AXI_ARB_PRIORITY" VALUE="0x000000000000000000000000"/>
+        <PARAMETER NAME="C_M_AXI_SECURE" VALUE="0x0000000000000000000000000000000000000000"/>
         <PARAMETER NAME="C_CONNECTIVITY_MODE" VALUE="0"/>
         <PARAMETER NAME="ADDR_RANGES" VALUE="1"/>
-        <PARAMETER NAME="NUM_SI" VALUE="2"/>
-        <PARAMETER NAME="NUM_MI" VALUE="4"/>
+        <PARAMETER NAME="NUM_SI" VALUE="3"/>
+        <PARAMETER NAME="NUM_MI" VALUE="5"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="CONNECTIVITY_MODE" VALUE="SASD"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="2"/>
         <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
         <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
@@ -6261,7 +7989,7 @@
         <PARAMETER NAME="S13_BASE_ID" VALUE="0x0000000d"/>
         <PARAMETER NAME="S14_BASE_ID" VALUE="0x0000000e"/>
         <PARAMETER NAME="S15_BASE_ID" VALUE="0x0000000f"/>
-        <PARAMETER NAME="M00_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M00_A00_BASE_ADDR" VALUE="0x0000000040600000"/>
         <PARAMETER NAME="M00_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
@@ -6277,7 +8005,7 @@
         <PARAMETER NAME="M00_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M00_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M01_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M01_A00_BASE_ADDR" VALUE="0x0000000080000000"/>
         <PARAMETER NAME="M01_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M01_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M01_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
@@ -6293,7 +8021,7 @@
         <PARAMETER NAME="M01_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M01_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M01_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M02_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M02_A00_BASE_ADDR" VALUE="0x0000000044A10000"/>
         <PARAMETER NAME="M02_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M02_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M02_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
@@ -6309,7 +8037,7 @@
         <PARAMETER NAME="M02_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M02_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M02_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M03_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M03_A00_BASE_ADDR" VALUE="0x0000000041200000"/>
         <PARAMETER NAME="M03_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M03_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M03_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
@@ -6325,22 +8053,22 @@
         <PARAMETER NAME="M03_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M03_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M03_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M04_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
-        <PARAMETER NAME="M04_A01_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A02_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A03_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A04_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A05_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A06_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A07_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A08_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A09_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A10_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A11_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A12_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A13_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A14_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M04_A15_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
+        <PARAMETER NAME="M04_A00_BASE_ADDR" VALUE="0x0000000044A00000"/>
+        <PARAMETER NAME="M04_A01_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A02_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A03_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A04_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A05_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A06_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A07_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A08_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A09_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A10_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A11_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A12_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A13_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A14_BASE_ADDR" VALUE="0xffffffffffffffff"/>
+        <PARAMETER NAME="M04_A15_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M05_A00_BASE_ADDR" VALUE="0xffffffffffffffff"/>
         <PARAMETER NAME="M05_A01_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
         <PARAMETER NAME="M05_A02_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
@@ -6517,7 +8245,7 @@
         <PARAMETER NAME="M15_A13_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
         <PARAMETER NAME="M15_A14_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
         <PARAMETER NAME="M15_A15_BASE_ADDR" VALUE="0xFFFFFFFFFFFFFFFF"/>
-        <PARAMETER NAME="M00_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M00_A00_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="M00_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A03_ADDR_WIDTH" VALUE="0"/>
@@ -6533,7 +8261,7 @@
         <PARAMETER NAME="M00_A13_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A14_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M00_A15_ADDR_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="M01_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M01_A00_ADDR_WIDTH" VALUE="27"/>
         <PARAMETER NAME="M01_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M01_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M01_A03_ADDR_WIDTH" VALUE="0"/>
@@ -6549,7 +8277,7 @@
         <PARAMETER NAME="M01_A13_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M01_A14_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M01_A15_ADDR_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="M02_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M02_A00_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="M02_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M02_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M02_A03_ADDR_WIDTH" VALUE="0"/>
@@ -6565,7 +8293,7 @@
         <PARAMETER NAME="M02_A13_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M02_A14_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M02_A15_ADDR_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="M03_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M03_A00_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="M03_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M03_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M03_A03_ADDR_WIDTH" VALUE="0"/>
@@ -6581,7 +8309,7 @@
         <PARAMETER NAME="M03_A13_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M03_A14_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M03_A15_ADDR_WIDTH" VALUE="0"/>
-        <PARAMETER NAME="M04_A00_ADDR_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M04_A00_ADDR_WIDTH" VALUE="16"/>
         <PARAMETER NAME="M04_A01_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M04_A02_ADDR_WIDTH" VALUE="0"/>
         <PARAMETER NAME="M04_A03_ADDR_WIDTH" VALUE="0"/>
@@ -6788,274 +8516,373 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_awid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awaddr">
+        <PORT DIR="I" NAME="s_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awaddr"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awaddr"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awaddr"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awlen">
+        <PORT DIR="I" NAME="s_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awlen"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awlen"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awlen"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awsize">
+        <PORT DIR="I" NAME="s_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awsize"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awsize"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awsize"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awburst">
+        <PORT DIR="I" NAME="s_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awburst"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awburst"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awburst"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awlock">
+        <PORT DIR="I" NAME="s_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awlock"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awlock"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awlock"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awcache">
+        <PORT DIR="I" NAME="s_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awcache"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awcache"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awcache"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awprot">
+        <PORT DIR="I" NAME="s_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awprot"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awprot"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awprot"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awqos">
+        <PORT DIR="I" NAME="s_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awqos"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awqos"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awqos"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awvalid">
+        <PORT DIR="I" NAME="s_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awvalid"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_awready">
+        <PORT DIR="O" NAME="s_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_awready"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_awready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_awready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_wdata">
+        <PORT DIR="I" NAME="s_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_wdata"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_wdata"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_wdata"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_wstrb">
+        <PORT DIR="I" NAME="s_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_wstrb"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_wstrb"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_wstrb"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_wlast">
+        <PORT DIR="I" NAME="s_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_wlast"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_wlast"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_wlast"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_wvalid">
+        <PORT DIR="I" NAME="s_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_wvalid"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_wvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_wvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_wready">
+        <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_wready"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_wready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_wready"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_bid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_bresp">
+        <PORT DIR="O" NAME="s_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_bresp"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_bresp"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_bresp"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_bvalid">
+        <PORT DIR="O" NAME="s_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_bvalid"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_bvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_bvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_bready">
+        <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_bready"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_bready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_bready"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axi_arid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_araddr">
+        <PORT DIR="I" NAME="s_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_araddr"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_araddr"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_araddr"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arlen">
+        <PORT DIR="I" NAME="s_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arlen"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arlen"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arlen"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arsize">
+        <PORT DIR="I" NAME="s_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arsize"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arsize"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arsize"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arburst">
+        <PORT DIR="I" NAME="s_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arburst"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arburst"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arburst"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arlock">
+        <PORT DIR="I" NAME="s_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arlock"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arlock"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arlock"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arcache">
+        <PORT DIR="I" NAME="s_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arcache"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arcache"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arcache"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arprot">
+        <PORT DIR="I" NAME="s_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arprot"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arprot"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arprot"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arqos">
+        <PORT DIR="I" NAME="s_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arqos"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arqos"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arqos"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arvalid">
+        <PORT DIR="I" NAME="s_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arvalid"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_arready">
+        <PORT DIR="O" NAME="s_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_arready"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_arready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_arready"/>
+          </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axi_rid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_rdata">
+        <PORT DIR="O" NAME="s_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_rdata"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_rdata"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_rdata"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_rresp">
+        <PORT DIR="O" NAME="s_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_rresp"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_rresp"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_rresp"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_rlast">
+        <PORT DIR="O" NAME="s_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_rlast"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_rlast"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_rlast"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_rvalid">
+        <PORT DIR="O" NAME="s_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_rvalid"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_rvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_rvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s01_couplers_auto_us_m_axi_rready">
+        <PORT DIR="I" NAME="s_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_s02_couplers_auto_us_m_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s00_couplers_auto_us" PORT="m_axi_rready"/>
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="m_axi_rready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="m_axi_rready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awaddr">
+        <PORT DIR="O" NAME="m_axi_awaddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
@@ -7068,8 +8895,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awlen">
+        <PORT DIR="O" NAME="m_axi_awlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awlen"/>
           </CONNECTIONS>
@@ -7082,8 +8912,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awlen"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awlen"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awsize">
+        <PORT DIR="O" NAME="m_axi_awsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awsize"/>
           </CONNECTIONS>
@@ -7096,8 +8929,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awsize"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awsize"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awburst">
+        <PORT DIR="O" NAME="m_axi_awburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awburst"/>
           </CONNECTIONS>
@@ -7110,8 +8946,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awburst"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awburst"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awlock">
+        <PORT DIR="O" NAME="m_axi_awlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awlock"/>
           </CONNECTIONS>
@@ -7124,8 +8963,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awlock"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awlock"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awcache">
+        <PORT DIR="O" NAME="m_axi_awcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awcache"/>
           </CONNECTIONS>
@@ -7138,8 +8980,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awcache"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awcache"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awprot">
+        <PORT DIR="O" NAME="m_axi_awprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awprot"/>
           </CONNECTIONS>
@@ -7152,8 +8997,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awprot"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awprot"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awregion">
+        <PORT DIR="O" NAME="m_axi_awregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awregion"/>
           </CONNECTIONS>
@@ -7166,8 +9014,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awregion"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awregion"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awqos">
+        <PORT DIR="O" NAME="m_axi_awqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awqos"/>
           </CONNECTIONS>
@@ -7180,8 +9031,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awqos"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awqos"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awvalid">
+        <PORT DIR="O" NAME="m_axi_awvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
@@ -7194,8 +9048,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_awready">
+        <PORT DIR="I" NAME="m_axi_awready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_awready"/>
           </CONNECTIONS>
@@ -7208,8 +9065,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_awready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_awready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_wdata">
+        <PORT DIR="O" NAME="m_axi_wdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_wdata"/>
           </CONNECTIONS>
@@ -7222,8 +9082,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_wdata"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_wstrb">
+        <PORT DIR="O" NAME="m_axi_wstrb" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wstrb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
@@ -7236,8 +9099,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_wlast">
+        <PORT DIR="O" NAME="m_axi_wlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_wlast"/>
           </CONNECTIONS>
@@ -7250,8 +9116,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_wlast"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_wlast"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_wvalid">
+        <PORT DIR="O" NAME="m_axi_wvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
@@ -7264,8 +9133,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_wready">
+        <PORT DIR="I" NAME="m_axi_wready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -7278,8 +9150,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_wready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_wready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_bresp">
+        <PORT DIR="I" NAME="m_axi_bresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_bresp"/>
           </CONNECTIONS>
@@ -7292,8 +9167,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_bresp"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_bvalid">
+        <PORT DIR="I" NAME="m_axi_bvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
@@ -7306,8 +9184,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_bready">
+        <PORT DIR="O" NAME="m_axi_bready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -7320,8 +9201,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_bready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_bready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_araddr">
+        <PORT DIR="O" NAME="m_axi_araddr" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_araddr"/>
           </CONNECTIONS>
@@ -7334,8 +9218,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_araddr"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arlen">
+        <PORT DIR="O" NAME="m_axi_arlen" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arlen">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arlen"/>
           </CONNECTIONS>
@@ -7348,8 +9235,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arlen"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arlen"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arsize">
+        <PORT DIR="O" NAME="m_axi_arsize" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arsize">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arsize"/>
           </CONNECTIONS>
@@ -7362,8 +9252,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arsize"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arsize"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arburst">
+        <PORT DIR="O" NAME="m_axi_arburst" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arburst">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arburst"/>
           </CONNECTIONS>
@@ -7376,8 +9269,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arburst"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arburst"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arlock">
+        <PORT DIR="O" NAME="m_axi_arlock" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arlock">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arlock"/>
           </CONNECTIONS>
@@ -7390,8 +9286,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arlock"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arlock"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arcache">
+        <PORT DIR="O" NAME="m_axi_arcache" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arcache"/>
           </CONNECTIONS>
@@ -7404,8 +9303,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arcache"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arcache"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arprot">
+        <PORT DIR="O" NAME="m_axi_arprot" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arprot"/>
           </CONNECTIONS>
@@ -7418,8 +9320,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arprot"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arprot"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arregion">
+        <PORT DIR="O" NAME="m_axi_arregion" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arregion">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arregion"/>
           </CONNECTIONS>
@@ -7432,8 +9337,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arregion"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arregion"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arqos">
+        <PORT DIR="O" NAME="m_axi_arqos" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arqos"/>
           </CONNECTIONS>
@@ -7446,8 +9354,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arqos"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arqos"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arvalid">
+        <PORT DIR="O" NAME="m_axi_arvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
@@ -7460,8 +9371,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_arready">
+        <PORT DIR="I" NAME="m_axi_arready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_arready"/>
           </CONNECTIONS>
@@ -7474,8 +9388,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_arready"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_arready"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_rdata">
+        <PORT DIR="I" NAME="m_axi_rdata" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_rdata"/>
           </CONNECTIONS>
@@ -7488,8 +9405,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_rdata"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_rresp">
+        <PORT DIR="I" NAME="m_axi_rresp" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_rresp"/>
           </CONNECTIONS>
@@ -7502,8 +9422,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_rresp"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_rlast">
+        <PORT DIR="I" NAME="m_axi_rlast" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rlast">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_rlast"/>
           </CONNECTIONS>
@@ -7516,8 +9439,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_rlast"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_rlast"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_rvalid">
+        <PORT DIR="I" NAME="m_axi_rvalid" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
@@ -7530,8 +9456,11 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m03_couplers_auto_ds_s_axi_rready">
+        <PORT DIR="O" NAME="m_axi_rready" SIGIS="undef" SIGNAME="microblaze_0_axi_periph_m04_couplers_auto_ds_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m00_couplers_auto_ds" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -7543,6 +9472,9 @@
           </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9726,7 +11658,7 @@
             <CONNECTION INSTANCE="rst_mig_7series_0_81M" PORT="dcm_locked"/>
           </CONNECTIONS>
         </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clk_i" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out2">
+        <PORT CLKFREQUENCY="200000000" DIR="I" NAME="sys_clk_i" SIGIS="clk" SIGNAME="clk_wiz_1_clk_out2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_1" PORT="clk_out2"/>
           </CONNECTIONS>
@@ -9865,6 +11797,8 @@
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m02_couplers_auto_pc" PORT="aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_ds" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_m03_couplers_auto_pc" PORT="aresetn"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_ds" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_m04_couplers_auto_pc" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="peripheral_aresetn" SIGIS="rst" SIGNAME="rst_clk_wiz_1_100M_peripheral_aresetn">
@@ -9876,6 +11810,10 @@
             <CONNECTION INSTANCE="axi_tft_0" PORT="m_axi_aresetn"/>
             <CONNECTION INSTANCE="microblaze_0_axi_periph_s01_couplers_auto_us" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_intc_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_pc" PORT="aresetn"/>
+            <CONNECTION INSTANCE="microblaze_0_axi_periph_s02_couplers_auto_us" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="compositor_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="compositor_0" PORT="m_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -9901,7 +11839,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
+        <PORT CLKFREQUENCY="81000000" DIR="I" NAME="slowest_sync_clk" SIGIS="clk" SIGNAME="mig_7series_0_ui_clk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="mig_7series_0" PORT="ui_clk"/>
           </CONNECTIONS>
@@ -9933,7 +11871,9 @@
     </MODULE>
   </MODULES>
 
-  <REPOSITORIES/>
+  <REPOSITORIES>
+    <REPOSITORY ABSPATH="c:/Users/Amanjit/Desktop/ECE532_git/CustomIP/ip_repo/compositor_1.0" RELPATH="..\..\..\..\..\CustomIP\ip_repo\compositor_1.0"/>
+  </REPOSITORIES>
 
   <ADDRESSSPACETAGS>
     <ADDRESSSPACETAG NAME="design_1_i/microblaze_0:design_1_i_microblaze_0"/>

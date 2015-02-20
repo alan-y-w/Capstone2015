@@ -1,0 +1,5 @@
+Running: xsim.dir/compositor_v1_0_behav/xsimk.exe -simmode gui -wdb compositor_v1_0_behav.wdb -simrunnum 0 -socket 3859
+Design successfully loaded
+Design Loading CPU Usage: 1809 ms
+Simulation completed
+Simulation CPU Usage: 1824 ms

@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
 
-<Project Version="7" Minor="0" Path="C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.xpr">
+<Project Version="7" Minor="0" Path="C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="7466cab4b4924c7fa68159e4f838e37b"/>
@@ -39,10 +39,13 @@
           <Attr Name="UsedIn" Val="synthesis"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_compositor_0_0/design_1_compositor_0_0.upgrade_log"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="design_1_wrapper"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="IPRepoPath" Val="$PPRDIR/../CustomIP/ip_repo"/>
+        <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

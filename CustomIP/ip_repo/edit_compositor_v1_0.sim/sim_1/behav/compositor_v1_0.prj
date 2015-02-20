@@ -1,0 +1,4 @@
+verilog xil_defaultlib  "c:/users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0/hdl/compositor_v1_0_S_AXI.v"
+verilog xil_defaultlib  "c:/users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0/hdl/compositor_v1_0_M_AXI.v"
+verilog xil_defaultlib  "c:/users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0/hdl/compositor_v1_0.v"
+verilog xil_defaultlib "C:/Xilinx/Vivado/2014.1/data/verilog/src/glbl.v"

@@ -1,4 +1,4 @@
-15:28:02 **** Auto Build of project test_bsp ****
+14:04:51 **** Auto Build of project test_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_0/src"
 make -C microblaze_0/libsrc/bram_v4_0/src -s include -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
@@ -8,9 +8,9 @@ make -C microblaze_0/libsrc/cpu_v2_0/src -s include -e "SHELL=CMD" "COMPILER=mb-
 make -C microblaze_0/libsrc/intc_v3_0/src -s include -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Running Make include in microblaze_0/libsrc/standalone_v4_0/src"
 make -C microblaze_0/libsrc/standalone_v4_0/src -s include -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
-make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/standalone_v4_0/src/profile'
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/standalone_v4_0/src/profile'
 cp -rf profile.h mblaze_nt_types.h _profile_timer_hw.h ../../../../include
-make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/standalone_v4_0/src/profile'
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/standalone_v4_0/src/profile'
 "Running Make include in microblaze_0/libsrc/tft_v5_0/src"
 make -C microblaze_0/libsrc/tft_v5_0/src -s include -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Running Make include in microblaze_0/libsrc/uartlite_v3_0/src"
@@ -18,37 +18,37 @@ make -C microblaze_0/libsrc/uartlite_v3_0/src -s include -e "SHELL=CMD" "COMPILE
 "Running Make libs in microblaze_0/libsrc/bram_v4_0/src"
 make -C microblaze_0/libsrc/bram_v4_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling bram"
-make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/bram_v4_0/src'
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/bram_v4_0/src'
 rm -rf *.o 
-make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/bram_v4_0/src'
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/bram_v4_0/src'
 "Running Make libs in microblaze_0/libsrc/cpu_v2_0/src"
 make -C microblaze_0/libsrc/cpu_v2_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling cpu"
-make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/cpu_v2_0/src'
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/cpu_v2_0/src'
 rm -rf *.o
-make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/cpu_v2_0/src'
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/cpu_v2_0/src'
 "Running Make libs in microblaze_0/libsrc/intc_v3_0/src"
 make -C microblaze_0/libsrc/intc_v3_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling intc"
-mb-ar: unable to rename '../../../lib/libxil.a'; reason: File exists
-make[1]: *** [libs] Error 1
-make: *** [microblaze_0/libsrc/intc_v3_0/src/make.libs] Error 2
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/intc_v3_0/src'
+rm -rf *.o 
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/intc_v3_0/src'
 "Running Make libs in microblaze_0/libsrc/standalone_v4_0/src"
 make -C microblaze_0/libsrc/standalone_v4_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling standalone";
 "Running Make libs in microblaze_0/libsrc/tft_v5_0/src"
 make -C microblaze_0/libsrc/tft_v5_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling tft"
-make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/tft_v5_0/src'
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/tft_v5_0/src'
 rm -rf *.o
-make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/tft_v5_0/src'
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/tft_v5_0/src'
 "Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src"
 make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
 "Compiling uartlite"
-make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/uartlite_v3_0/src'
+make[2]: Entering directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/uartlite_v3_0/src'
 rm -rf *.o 
-make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/uartlite_v3_0/src'
-make: Target `all' not remade because of errors.
+make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/test_bsp/microblaze_0/libsrc/uartlite_v3_0/src'
+'Finished building libraries'
 
-15:28:25 Build Finished (took 22s.958ms)
+14:06:20 Build Finished (took 1m:29s.608ms)
 

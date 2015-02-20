@@ -1,6 +1,6 @@
-15:28:02 **** Auto Build of configuration Debug for project DanDaMan ****
+19:04:24 **** Incremental Build of configuration Debug for project DanDaMan ****
 make all 
 make: Nothing to be done for `all'.
 
-15:28:02 Build Finished (took 354ms)
+19:04:24 Build Finished (took 331ms)
 

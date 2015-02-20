@@ -774,7 +774,7 @@ BEGIN
       C_FPU_EXCEPTION => 0,
       C_FSL_EXCEPTION => 0,
       C_USE_STACK_PROTECTION => 0,
-      C_USE_INTERRUPT => 0,
+      C_USE_INTERRUPT => 1,
       C_USE_EXT_BRK => 0,
       C_USE_EXT_NM_BRK => 0,
       C_USE_MMU => 0,
