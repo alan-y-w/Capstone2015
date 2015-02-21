@@ -1,0 +1,69 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.1 (win64) Build 881834 Fri Apr  4 14:15:54 MDT 2014
+| Date         : Sat Feb 21 11:14:14 2015
+| Host         : AMANJIT running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file ov7670_top_control_sets_placed.rpt
+| Design       : ov7670_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    16 |
+| Minimum Number of register sites lost to control set restrictions |    49 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              25 |           10 |
+| No           | No                    | Yes                    |              25 |           12 |
+| No           | Yes                   | No                     |              55 |           20 |
+| Yes          | No                    | No                     |              38 |           12 |
+| Yes          | No                    | Yes                    |              26 |           12 |
+| Yes          | Yes                   | No                     |              38 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+--------------------------------------------+------------------------------+------------------+----------------+
+|      Clock Signal      |                Enable Signal               |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
++------------------------+--------------------------------------------+------------------------------+------------------+----------------+
+|  u_clock/inst/clk_out1 |                                            |                              |                1 |              1 |
+|  u_clock/inst/clk_out2 | IIC/u_I2C_Controller/E[0]                  | btn_debounce/o               |                3 |              4 |
+|  u_clock/inst/clk_out2 | Inst_vga/n_0_vCounter[8]_i_1               | Inst_vga/n_0_vCounter[9]_i_1 |                1 |              4 |
+|  u_clock/inst/clk_out2 | Inst_vga/n_0_vCounter[8]_i_1               |                              |                2 |              6 |
+|  u_clock/inst/clk_out2 | IIC/u_I2C_Controller/n_0_SD_COUNTER[5]_i_1 | btn_debounce/o               |                2 |              6 |
+|  xlnx_opt__3           |                                            | OV7670_VSYNC_IBUF            |                2 |              6 |
+|  u_clock/inst/clk_out2 |                                            | Inst_vga/blank               |                8 |             12 |
+|  xlnx_opt__3           |                                            | capture/n_0_address[15]_i_1  |                4 |             13 |
+|  u_clock/inst/clk_out2 | IIC/n_0_LUT_INDEX_rep[7]_i_1               | btn_debounce/o               |                7 |             16 |
+|  xlnx_opt__3           | capture/n_0_dout[15]_i_1                   |                              |                3 |             16 |
+|  xlnx_opt__3           | capture/n_0_d_latch[15]_i_1                |                              |                7 |             16 |
+|  u_clock/inst/clk_out2 | Inst_vga/n_0_address[0]_i_2                | Inst_vga/n_0_address[0]_i_1  |                5 |             17 |
+|  xlnx_opt__3           | capture/p_0_in0                            | OV7670_VSYNC_IBUF            |                5 |             17 |
+|  u_clock/inst/clk_out2 |                                            |                              |                9 |             24 |
+|  u_clock/inst/clk_out1 |                                            | btn_debounce/clear           |                6 |             24 |
+|  u_clock/inst/clk_out2 |                                            | btn_debounce/o               |               12 |             25 |
++------------------------+--------------------------------------------+------------------------------+------------------+----------------+
+
+

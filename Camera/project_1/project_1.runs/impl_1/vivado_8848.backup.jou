@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Sat Feb 21 11:10:02 2015
+# Process ID: 8288
+# Log file: C:/Users/Amanjit/Desktop/Camera/project_1/project_1.runs/impl_1/ov7670_top.vdi
+# Journal file: C:/Users/Amanjit/Desktop/Camera/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ov7670_top.tcl -notrace
