@@ -11,7 +11,7 @@
 source design_1_wrapper.tcl -notrace
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Netlist 29-17] Analyzing 411 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 439 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.1
 Loading clock regions from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
@@ -31,7 +31,7 @@ Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/Pain
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_ilmb_v10_0/design_1_ilmb_v10_0.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10/U0'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 1029.727 ; gain = 453.523
+get_clocks: Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1040.633 ; gain = 457.156
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc] for cell 'design_1_i/mdm_1/U0'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc] for cell 'design_1_i/clk_wiz_1/inst'
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:56]
@@ -96,43 +96,52 @@ Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/Pain
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_tft_0_0/design_1_axi_tft_0_0.xdc] for cell 'design_1_i/axi_tft_0/U0'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1.xdc] for cell 'design_1_i/axi_intc_0/U0'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1.xdc] for cell 'design_1_i/axi_intc_0/U0'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc] for cell 'design_1_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc] for cell 'design_1_i/axi_vdma_0/U0'
 Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/constrs_1/new/design_1.xdc]
 Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/constrs_1/new/design_1.xdc]
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_tft_0_0/design_1_axi_tft_0_0_clocks.xdc] for cell 'design_1_i/axi_tft_0/U0'
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_tft_0_0/design_1_axi_tft_0_0_clocks.xdc:48]
-get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1050.402 ; gain = 6.496
+get_clocks: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1063.707 ; gain = 4.117
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_tft_0_0/design_1_axi_tft_0_0_clocks.xdc] for cell 'design_1_i/axi_tft_0/U0'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_clocks.xdc] for cell 'design_1_i/axi_intc_0/U0'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_clocks.xdc] for cell 'design_1_i/axi_intc_0/U0'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc] for cell 'design_1_i/axi_vdma_0/U0'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc] for cell 'design_1_i/axi_vdma_0/U0'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m00_couplers/auto_ds/inst'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m00_couplers/auto_ds/inst'
-Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst'
-Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m02_couplers/auto_ds/inst'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m02_couplers/auto_ds/inst'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m03_couplers/auto_ds/inst'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m03_couplers/auto_ds/inst'
-Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_ds/inst'
-Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m04_couplers/auto_ds/inst'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s00_couplers/auto_us/inst'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s00_couplers/auto_us/inst'
 Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s01_couplers/auto_us/inst'
 Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s01_couplers/auto_us/inst'
-Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s02_couplers/auto_us/inst'
-Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s02_couplers/auto_us/inst'
+Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s03_couplers/auto_us/inst'
+Finished Parsing XDC File [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc] for cell 'design_1_i/microblaze_0_axi_periph/s03_couplers/auto_us/inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 Generating merged BMM file for the design top 'design_1_wrapper'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/ipshared/xilinx.com/microblaze_v9_3/7b6e2d75/data/mb_bootloop_le.elf 
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 363 instances were transformed.
+  A total of 367 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 104 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 240 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 243 instances
 
-link_design: Time (s): cpu = 00:01:42 ; elapsed = 00:02:10 . Memory (MB): peak = 1063.355 ; gain = 876.395
+link_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:10 . Memory (MB): peak = 1076.965 ; gain = 890.293
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -143,7 +152,7 @@ INFO: [Drc 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1063.355 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1076.965 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -151,28 +160,28 @@ Phase 1 Retarget
 
 INFO: [Opt 31-138] Pushed 3 inverter(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 1ce61c7af
+Phase 1 Retarget | Checksum: 21d5d3878
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.000
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.965 ; gain = 0.000
 
 Phase 2 Constant Propagation
-INFO: [Opt 31-138] Pushed 43 inverter(s).
-INFO: [Opt 31-10] Eliminated 1768 cells.
-Phase 2 Constant Propagation | Checksum: 1254afa65
+INFO: [Opt 31-138] Pushed 37 inverter(s).
+INFO: [Opt 31-10] Eliminated 1348 cells.
+Phase 2 Constant Propagation | Checksum: 2120de21e
 
-Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1063.355 ; gain = 0.000
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1076.965 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 6106 unconnected nets.
-INFO: [Opt 31-11] Eliminated 10153 unconnected cells.
-Phase 3 Sweep | Checksum: 261871a97
+INFO: [Opt 31-12] Eliminated 5113 unconnected nets.
+INFO: [Opt 31-11] Eliminated 8542 unconnected cells.
+Phase 3 Sweep | Checksum: 21803154c
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 261871a97
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1076.965 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 21803154c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.000
-Implement Debug Cores | Checksum: f32f649f
-Logic Optimization | Checksum: f32f649f
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:49 . Memory (MB): peak = 1076.965 ; gain = 0.000
+Implement Debug Cores | Checksum: 190ad5049
+Logic Optimization | Checksum: 190ad5049
 
 Starting Power Optimization Task
 
@@ -216,28 +225,28 @@ Resolution: A valid start point is a main or generated clock pin or port, a cloc
 WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_en_i_1' is not a valid startpoint. [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending PowerOpt TimerUpdates Task | Checksum: 261871a97
+Ending PowerOpt TimerUpdates Task | Checksum: 21803154c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1076.965 ; gain = 0.000
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 3 has been updated to save power.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 11 has been updated to save power.
     Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 6
-Ending Power Optimization Task | Checksum: 261871a97
+Number of BRAM Ports augmented: 4 newly gated: 0 Total Ports: 22
+Ending Power Optimization Task | Checksum: 1fd76b698
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 1160.680 ; gain = 97.324
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 1193.500 ; gain = 116.535
 INFO: [Common 17-83] Releasing license: Implementation
 27 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:01:09 ; elapsed = 00:02:13 . Memory (MB): peak = 1160.680 ; gain = 97.324
+opt_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:49 . Memory (MB): peak = 1193.500 ; gain = 116.535
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1160.680 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1193.500 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1193.500 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -252,43 +261,43 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Core
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.359 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.1 Mandatory Logic Optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.170 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.1 Mandatory Logic Optimization | Checksum: af1055f4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.179 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.1 Mandatory Logic Optimization | Checksum: fbf20588
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.2 Build Super Logic Region (SLR) Database
-Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: af1055f4
+Phase 1.1.2 Build Super Logic Region (SLR) Database | Checksum: fbf20588
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.3 Add Constraints
-Phase 1.1.3 Add Constraints | Checksum: af1055f4
+Phase 1.1.3 Add Constraints | Checksum: fbf20588
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.4 Build Shapes/ HD Config
 
 Phase 1.1.4.1 Build Macros
-Phase 1.1.4.1 Build Macros | Checksum: c1508fa2
+Phase 1.1.4.1 Build Macros | Checksum: 1390ec1b4
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.4 Build Shapes/ HD Config | Checksum: c1508fa2
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.4 Build Shapes/ HD Config | Checksum: 1390ec1b4
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 1.1.5.1 Pre-Place Cells
-Phase 1.1.5.1 Pre-Place Cells | Checksum: a6a8e55a
+Phase 1.1.5.1 Pre-Place Cells | Checksum: 3ae5c9e5
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.5.2 Implementation Feasibility check
 WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[0]_i_1' is not a valid startpoint. [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
@@ -330,153 +339,163 @@ Resolution: A valid start point is a main or generated clock pin or port, a cloc
 WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_en_i_1' is not a valid startpoint. [c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.1.5.2 Implementation Feasibility check | Checksum: a6a8e55a
+Phase 1.1.5.2 Implementation Feasibility check | Checksum: 3ae5c9e5
 
-Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.500 ; gain = 0.000
+WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	OV7670_PCLK_IBUF_inst (IBUF.O) is locked to IOB_X0Y121
+	OV7670_PCLK_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y3
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
 
 Phase 1.1.5.3 Implementation Feasibility check On IDelay
-Phase 1.1.5.3 Implementation Feasibility check On IDelay | Checksum: a6a8e55a
+Phase 1.1.5.3 Implementation Feasibility check On IDelay | Checksum: 3ae5c9e5
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d6702ff1
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:34 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e6060ef2
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:26 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:34 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.6 Build Placer Netlist Model
 
 Phase 1.1.6.1 Place Init Design
 
 Phase 1.1.6.1.1 Build Clock Data
-Phase 1.1.6.1.1 Build Clock Data | Checksum: 10881f7ea
+Phase 1.1.6.1.1 Build Clock Data | Checksum: 134c2a0f6
 
-Time (s): cpu = 00:01:36 ; elapsed = 00:01:05 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.6.1 Place Init Design | Checksum: 104ae90e9
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:46 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.6.1 Place Init Design | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:01:08 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.6 Build Placer Netlist Model | Checksum: 104ae90e9
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.6 Build Placer Netlist Model | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:51 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 1.1.7 Constrain Clocks/Macros
 
 Phase 1.1.7.1 Constrain Global/Regional Clocks
-Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: 104ae90e9
+Phase 1.1.7.1 Constrain Global/Regional Clocks | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1.7 Constrain Clocks/Macros | Checksum: 104ae90e9
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:51 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1.7 Constrain Clocks/Macros | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1.1 Placer Initialization Core | Checksum: 104ae90e9
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:52 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1.1 Placer Initialization Core | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:41 ; elapsed = 00:01:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 104ae90e9
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:52 . Memory (MB): peak = 1193.500 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: ebad0aad
 
-Time (s): cpu = 00:01:41 ; elapsed = 00:01:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:52 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 13b6530d2
+Phase 2 Global Placement | Checksum: 1505d5aec
 
-Time (s): cpu = 00:03:07 ; elapsed = 00:02:08 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:05:06 ; elapsed = 00:03:28 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 13b6530d2
+Phase 3.1 Commit Multi Column Macros | Checksum: 1505d5aec
 
-Time (s): cpu = 00:03:08 ; elapsed = 00:02:09 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:05:06 ; elapsed = 00:03:29 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: c31dd05c
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14e8408f8
 
-Time (s): cpu = 00:03:36 ; elapsed = 00:02:27 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:05:46 ; elapsed = 00:03:56 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 123c37508
+Phase 3.3 Area Swap Optimization | Checksum: 14ee12331
 
-Time (s): cpu = 00:03:36 ; elapsed = 00:02:28 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:05:47 ; elapsed = 00:03:57 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 3.4 Timing Path Optimizer
-Phase 3.4 Timing Path Optimizer | Checksum: a7be9db4
+Phase 3.4 Timing Path Optimizer | Checksum: 11d1c1461
 
-Time (s): cpu = 00:03:56 ; elapsed = 00:02:39 . Memory (MB): peak = 1160.680 ; gain = 0.000
+Time (s): cpu = 00:06:15 ; elapsed = 00:04:13 . Memory (MB): peak = 1193.500 ; gain = 0.000
 
 Phase 3.5 Commit Small Macros & Core Logic
-Phase 3.5 Commit Small Macros & Core Logic | Checksum: f2025701
+Phase 3.5 Commit Small Macros & Core Logic | Checksum: 115571829
 
-Time (s): cpu = 00:04:15 ; elapsed = 00:02:59 . Memory (MB): peak = 1165.426 ; gain = 4.746
+Time (s): cpu = 00:06:45 ; elapsed = 00:04:44 . Memory (MB): peak = 1198.133 ; gain = 4.633
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: f2025701
+Phase 3.6 Re-assign LUT pins | Checksum: 115571829
 
-Time (s): cpu = 00:04:18 ; elapsed = 00:03:02 . Memory (MB): peak = 1166.293 ; gain = 5.613
-Phase 3 Detail Placement | Checksum: f2025701
+Time (s): cpu = 00:06:50 ; elapsed = 00:04:49 . Memory (MB): peak = 1200.457 ; gain = 6.957
+Phase 3 Detail Placement | Checksum: 115571829
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:03:02 . Memory (MB): peak = 1166.293 ; gain = 5.613
+Time (s): cpu = 00:06:50 ; elapsed = 00:04:49 . Memory (MB): peak = 1200.457 ; gain = 6.957
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 PCOPT Shape updates
-Phase 4.1 PCOPT Shape updates | Checksum: 15b528305
+Phase 4.1 PCOPT Shape updates | Checksum: 106cc97a4
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:03:03 . Memory (MB): peak = 1166.293 ; gain = 5.613
+Time (s): cpu = 00:06:52 ; elapsed = 00:04:50 . Memory (MB): peak = 1200.457 ; gain = 6.957
 
 Phase 4.2 Post Placement Optimization
 
 Phase 4.2.1 Post Placement Timing Optimization
 
 Phase 4.2.1.1 Restore Best Placement
-Phase 4.2.1.1 Restore Best Placement | Checksum: 12c427bc1
+Phase 4.2.1.1 Restore Best Placement | Checksum: 1b7f8d961
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:50 . Memory (MB): peak = 1172.801 ; gain = 12.121
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.454. For the most accurate timing information please run report_timing.
-Phase 4.2.1 Post Placement Timing Optimization | Checksum: 12c427bc1
+Time (s): cpu = 00:09:37 ; elapsed = 00:07:21 . Memory (MB): peak = 1205.930 ; gain = 12.430
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:51 . Memory (MB): peak = 1172.801 ; gain = 12.121
-Phase 4.2 Post Placement Optimization | Checksum: 12c427bc1
+Phase 4.2.1.2 updateTiming after Restore Best Placement
+Phase 4.2.1.2 updateTiming after Restore Best Placement | Checksum: 1b7f8d961
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:51 . Memory (MB): peak = 1172.801 ; gain = 12.121
+Time (s): cpu = 00:09:38 ; elapsed = 00:07:22 . Memory (MB): peak = 1205.930 ; gain = 12.430
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.205. For the most accurate timing information please run report_timing.
+Phase 4.2.1 Post Placement Timing Optimization | Checksum: 1b7f8d961
+
+Time (s): cpu = 00:09:38 ; elapsed = 00:07:22 . Memory (MB): peak = 1205.930 ; gain = 12.430
+Phase 4.2 Post Placement Optimization | Checksum: 1b7f8d961
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:07:23 . Memory (MB): peak = 1205.930 ; gain = 12.430
 
 Phase 4.3 Post Placement Cleanup
-Phase 4.3 Post Placement Cleanup | Checksum: 12c427bc1
+Phase 4.3 Post Placement Cleanup | Checksum: 1b7f8d961
 
-Time (s): cpu = 00:05:16 ; elapsed = 00:03:51 . Memory (MB): peak = 1172.801 ; gain = 12.121
+Time (s): cpu = 00:09:39 ; elapsed = 00:07:23 . Memory (MB): peak = 1205.930 ; gain = 12.430
 
 Phase 4.4 Placer Reporting
 
 Phase 4.4.1 Restore STA
-Phase 4.4.1 Restore STA | Checksum: 12c427bc1
+Phase 4.4.1 Restore STA | Checksum: 1b7f8d961
 
-Time (s): cpu = 00:05:17 ; elapsed = 00:03:51 . Memory (MB): peak = 1172.801 ; gain = 12.121
-Phase 4.4 Placer Reporting | Checksum: 12c427bc1
+Time (s): cpu = 00:09:40 ; elapsed = 00:07:24 . Memory (MB): peak = 1205.930 ; gain = 12.430
+Phase 4.4 Placer Reporting | Checksum: 1b7f8d961
 
-Time (s): cpu = 00:05:25 ; elapsed = 00:03:56 . Memory (MB): peak = 1172.801 ; gain = 12.121
+Time (s): cpu = 00:09:50 ; elapsed = 00:07:29 . Memory (MB): peak = 1205.930 ; gain = 12.430
 
 Phase 4.5 Final Placement Cleanup
-Phase 4.5 Final Placement Cleanup | Checksum: 1ff6fa8e0
+Phase 4.5 Final Placement Cleanup | Checksum: 124036e79
 
-Time (s): cpu = 00:05:25 ; elapsed = 00:03:56 . Memory (MB): peak = 1172.801 ; gain = 12.121
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1ff6fa8e0
+Time (s): cpu = 00:09:50 ; elapsed = 00:07:30 . Memory (MB): peak = 1205.930 ; gain = 12.430
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 124036e79
 
-Time (s): cpu = 00:05:25 ; elapsed = 00:03:56 . Memory (MB): peak = 1172.801 ; gain = 12.121
-Ending Placer Task | Checksum: 12d0c11e6
+Time (s): cpu = 00:09:51 ; elapsed = 00:07:30 . Memory (MB): peak = 1205.930 ; gain = 12.430
+Ending Placer Task | Checksum: 9e1f76c6
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:03:56 . Memory (MB): peak = 1172.801 ; gain = 12.121
+Time (s): cpu = 00:00:00 ; elapsed = 00:07:30 . Memory (MB): peak = 1205.930 ; gain = 12.430
 INFO: [Common 17-83] Releasing license: Implementation
-38 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
+38 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:05:31 ; elapsed = 00:05:03 . Memory (MB): peak = 1172.801 ; gain = 12.121
+place_design: Time (s): cpu = 00:09:58 ; elapsed = 00:07:58 . Memory (MB): peak = 1205.930 ; gain = 12.430
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1172.801 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1172.801 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.858 . Memory (MB): peak = 1172.801 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1205.930 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1205.930 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 1205.930 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
 Running DRC as a precondition to command route_design
 INFO: [Drc 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 
@@ -486,108 +505,125 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Starting Route Task
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: b26e8bfd
+Phase 1 Build RT Design | Checksum: 11585d83d
 
-Time (s): cpu = 00:01:40 ; elapsed = 00:01:24 . Memory (MB): peak = 1331.848 ; gain = 123.629
+Time (s): cpu = 00:02:24 ; elapsed = 00:01:58 . Memory (MB): peak = 1363.313 ; gain = 116.469
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: b26e8bfd
+Phase 2.1 Create Timer | Checksum: 11585d83d
 
-Time (s): cpu = 00:01:41 ; elapsed = 00:01:26 . Memory (MB): peak = 1331.848 ; gain = 123.629
+Time (s): cpu = 00:02:26 ; elapsed = 00:02:00 . Memory (MB): peak = 1363.313 ; gain = 116.469
  Number of Nodes with overlaps = 0
 
 Phase 2.2 Update Timing
-Phase 2.2 Update Timing | Checksum: ce321238
+Phase 2.2 Update Timing | Checksum: 1725f7ccc
 
-Time (s): cpu = 00:02:25 ; elapsed = 00:01:52 . Memory (MB): peak = 1372.680 ; gain = 164.461
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.72   | TNS=0      | WHS=-0.425 | THS=-1.28e+003|
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:39 . Memory (MB): peak = 1409.492 ; gain = 162.648
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.0596 | TNS=0      | WHS=-0.434 | THS=-1.58e+003|
 
-Phase 2 Router Initialization | Checksum: ce321238
+Phase 2 Router Initialization | Checksum: 1725f7ccc
 
-Time (s): cpu = 00:02:50 ; elapsed = 00:02:10 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Time (s): cpu = 00:04:10 ; elapsed = 00:03:09 . Memory (MB): peak = 1409.492 ; gain = 162.648
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: d3f0132a
+Phase 3 Initial Routing | Checksum: fa5b7d33
 
-Time (s): cpu = 00:03:00 ; elapsed = 00:02:16 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Time (s): cpu = 00:04:32 ; elapsed = 00:03:21 . Memory (MB): peak = 1409.492 ; gain = 162.648
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 2320
- Number of Nodes with overlaps = 224
- Number of Nodes with overlaps = 40
- Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2873
+ Number of Nodes with overlaps = 355
+ Number of Nodes with overlaps = 75
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 1baeef721
+Phase 4.1.1 Update Timing | Checksum: efbf4266
 
-Time (s): cpu = 00:03:45 ; elapsed = 00:02:43 . Memory (MB): peak = 1372.680 ; gain = 164.461
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.63   | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:05:46 ; elapsed = 00:04:05 . Memory (MB): peak = 1409.492 ; gain = 162.648
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0704| TNS=-0.916 | WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 9c06ca16
 
-Time (s): cpu = 00:03:46 ; elapsed = 00:02:44 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Phase 4.1.2 GlobIterForTiming
+
+Phase 4.1.2.1 Update Timing
+Phase 4.1.2.1 Update Timing | Checksum: a34fed84
+
+Time (s): cpu = 00:05:52 ; elapsed = 00:04:09 . Memory (MB): peak = 1409.492 ; gain = 162.648
+
+Phase 4.1.2.2 Fast Budgeting
+Phase 4.1.2.2 Fast Budgeting | Checksum: a34fed84
+
+Time (s): cpu = 00:05:56 ; elapsed = 00:04:14 . Memory (MB): peak = 1422.648 ; gain = 175.805
+Phase 4.1.2 GlobIterForTiming | Checksum: 6a16ff8b
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:04:16 . Memory (MB): peak = 1422.648 ; gain = 175.805
+Phase 4.1 Global Iteration 0 | Checksum: 6a16ff8b
+
+Time (s): cpu = 00:05:58 ; elapsed = 00:04:16 . Memory (MB): peak = 1422.648 ; gain = 175.805
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 12
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 129
+ Number of Nodes with overlaps = 36
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 7
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 1467e0d74
+Phase 4.2.1 Update Timing | Checksum: 8bb76c66
 
-Time (s): cpu = 00:03:51 ; elapsed = 00:02:48 . Memory (MB): peak = 1372.680 ; gain = 164.461
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.735  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:06:10 ; elapsed = 00:04:25 . Memory (MB): peak = 1422.648 ; gain = 175.805
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.115 | TNS=-0.975 | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 1467e0d74
+Phase 4.2 Global Iteration 1 | Checksum: 16c82aa7b
 
-Time (s): cpu = 00:03:52 ; elapsed = 00:02:48 . Memory (MB): peak = 1372.680 ; gain = 164.461
-Phase 4 Rip-up And Reroute | Checksum: 1467e0d74
+Time (s): cpu = 00:06:10 ; elapsed = 00:04:26 . Memory (MB): peak = 1422.648 ; gain = 175.805
+Phase 4 Rip-up And Reroute | Checksum: 16c82aa7b
 
-Time (s): cpu = 00:03:52 ; elapsed = 00:02:49 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Time (s): cpu = 00:06:10 ; elapsed = 00:04:26 . Memory (MB): peak = 1422.648 ; gain = 175.805
 
 Phase 5 Delay CleanUp
 
 Phase 5.1 Update Timing
-Phase 5.1 Update Timing | Checksum: 1467e0d74
+Phase 5.1 Update Timing | Checksum: 16c82aa7b
 
-Time (s): cpu = 00:04:02 ; elapsed = 00:02:54 . Memory (MB): peak = 1372.680 ; gain = 164.461
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.742  | TNS=0      | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:06:27 ; elapsed = 00:04:35 . Memory (MB): peak = 1422.648 ; gain = 175.805
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0634| TNS=-0.776 | WHS=N/A    | THS=N/A    |
 
-Phase 5 Delay CleanUp | Checksum: 1467e0d74
+ Number of Nodes with overlaps = 0
+Phase 5 Delay CleanUp | Checksum: 11790e568
 
-Time (s): cpu = 00:04:02 ; elapsed = 00:02:54 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Time (s): cpu = 00:06:30 ; elapsed = 00:04:37 . Memory (MB): peak = 1422.648 ; gain = 175.805
 
 Phase 6 Clock Skew Optimization
-Phase 6 Clock Skew Optimization | Checksum: 1467e0d74
+Phase 6 Clock Skew Optimization | Checksum: 11790e568
 
-Time (s): cpu = 00:04:02 ; elapsed = 00:02:54 . Memory (MB): peak = 1372.680 ; gain = 164.461
+Time (s): cpu = 00:06:30 ; elapsed = 00:04:37 . Memory (MB): peak = 1422.648 ; gain = 175.805
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: 1467e0d74
+Phase 7.1 Update Timing | Checksum: 11790e568
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:03:04 . Memory (MB): peak = 1376.766 ; gain = 168.547
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.742  | TNS=0      | WHS=0.00623| THS=0      |
+Time (s): cpu = 00:06:55 ; elapsed = 00:04:52 . Memory (MB): peak = 1422.648 ; gain = 175.805
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0434| TNS=-0.389 | WHS=-0.0378| THS=-0.0645|
 
-Phase 7 Post Hold Fix | Checksum: 1467e0d74
+Phase 7 Post Hold Fix | Checksum: d7ad5af0
 
-Time (s): cpu = 00:04:19 ; elapsed = 00:03:04 . Memory (MB): peak = 1377.766 ; gain = 169.547
+Time (s): cpu = 00:06:56 ; elapsed = 00:04:53 . Memory (MB): peak = 1423.785 ; gain = 176.941
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.74601 %
-  Global Horizontal Routing Utilization  = 4.42754 %
+  Global Vertical Routing Utilization    = 4.29934 %
+  Global Horizontal Routing Utilization  = 5.2289 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -596,52 +632,64 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 8 Route finalize | Checksum: 1467e0d74
+Congestion Report
+North Dir 1x1 Area, Max Cong = 62.1622%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 61.2613%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 69.1176%, No Congested Regions.
+Phase 8 Route finalize | Checksum: d7ad5af0
 
-Time (s): cpu = 00:04:20 ; elapsed = 00:03:04 . Memory (MB): peak = 1378.746 ; gain = 170.527
+Time (s): cpu = 00:06:57 ; elapsed = 00:04:53 . Memory (MB): peak = 1424.219 ; gain = 177.375
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1467e0d74
+Phase 9 Verifying routed nets | Checksum: d7ad5af0
 
-Time (s): cpu = 00:04:20 ; elapsed = 00:03:04 . Memory (MB): peak = 1379.738 ; gain = 171.520
+Time (s): cpu = 00:06:57 ; elapsed = 00:04:53 . Memory (MB): peak = 1425.922 ; gain = 179.078
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 1a334fd86
+Phase 10 Depositing Routes | Checksum: a80be1d9
 
-Time (s): cpu = 00:04:24 ; elapsed = 00:03:09 . Memory (MB): peak = 1380.688 ; gain = 172.469
+Time (s): cpu = 00:07:03 ; elapsed = 00:05:00 . Memory (MB): peak = 1428.641 ; gain = 181.797
 
 Phase 11 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.742  | TNS=0      | WHS=0.00623| THS=0      |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 11 Post Router Timing | Checksum: 1a334fd86
+Phase 11.1 Update Timing
+Phase 11.1 Update Timing | Checksum: a80be1d9
 
-Time (s): cpu = 00:04:40 ; elapsed = 00:03:17 . Memory (MB): peak = 1380.688 ; gain = 172.469
+Time (s): cpu = 00:07:26 ; elapsed = 00:05:12 . Memory (MB): peak = 1428.641 ; gain = 181.797
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.0434| TNS=-0.389 | WHS=0.0174 | THS=0      |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 11 Post Router Timing | Checksum: a80be1d9
+
+Time (s): cpu = 00:07:27 ; elapsed = 00:05:13 . Memory (MB): peak = 1428.641 ; gain = 181.797
 INFO: [Route 35-16] Router Completed Successfully
-Ending Route Task | Checksum: 1a334fd86
+Ending Route Task | Checksum: a80be1d9
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:03:18 . Memory (MB): peak = 1380.688 ; gain = 172.469
+Time (s): cpu = 00:00:00 ; elapsed = 00:05:13 . Memory (MB): peak = 1428.641 ; gain = 181.797
 
 Routing Is Done.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:03:18 . Memory (MB): peak = 1380.688 ; gain = 172.469
+Time (s): cpu = 00:00:00 ; elapsed = 00:05:14 . Memory (MB): peak = 1428.641 ; gain = 181.797
 INFO: [Common 17-83] Releasing license: Implementation
-52 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:04:53 ; elapsed = 00:04:27 . Memory (MB): peak = 1380.688 ; gain = 207.887
+route_design: Time (s): cpu = 00:07:45 ; elapsed = 00:05:52 . Memory (MB): peak = 1428.641 ; gain = 222.711
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1380.688 ; gain = 0.000
-write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1380.688 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1428.641 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1428.641 ; gain = 0.000
 INFO: [Drc 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/design_1_wrapper_drc_routed.rpt.
-report_drc: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 1396.105 ; gain = 15.418
+report_drc: Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 1440.418 ; gain = 11.777
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-report_timing_summary: Time (s): cpu = 00:01:28 ; elapsed = 00:00:55 . Memory (MB): peak = 1558.938 ; gain = 162.832
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:02:36 ; elapsed = 00:01:37 . Memory (MB): peak = 1615.852 ; gain = 175.434
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -649,8 +697,8 @@ WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1,
 Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets reset_IBUF]'  to set the static_probability to '1'  if desired.
 WARNING: [Power 33-218] MMCM/PLL RST static_probability should be either 0 or 1, power analysis is using 0 by default.
 Use 'set_switching_activity -static_probability 1 -signal_rate 0 [get_nets design_1_i/mig_7series_0/u_design_1_mig_7series_0_0_mig/u_ddr2_infrastructure/sys_rst_act_hi]'  to set the static_probability to '1'  if desired.
-report_power: Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1581.406 ; gain = 22.469
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 19 12:22:06 2015...
+report_power: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 1640.727 ; gain = 24.875
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 28 17:51:50 2015...
 
 *** Running vivado
     with args -log design_1_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
@@ -663,7 +711,7 @@ INFO: [Common 17-206] Exiting Vivado at Thu Feb 19 12:22:06 2015...
 
 source design_1_wrapper.tcl -notrace
 Command: open_checkpoint design_1_wrapper_routed.dcp
-INFO: [Netlist 29-17] Analyzing 400 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 428 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.1
 Loading clock regions from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
@@ -673,9 +721,107 @@ Loading package pin functions from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/art
 Loading package from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
 Loading io standards from C:/Xilinx/Vivado/2014.1/data\./parts/xilinx/artix7/IOStandards.xml
 Loading device configuration modes from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/ConfigModes.xml
-Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper_early.xdc]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
-get_clocks: Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 988.855 ; gain = 437.230
+get_clocks: Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1003.797 ; gain = 443.535
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:56]
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1010.617 ; gain = 6.820
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[0]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[10]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[11]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[1]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[2]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[3]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[4]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[5]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[6]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[7]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[8]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[9]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_2' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_3' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_4' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_i_5' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_sync_r4_neq_r3_reg_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_clr_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_en_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
+Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper.xdc]
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper.xdc]
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper_late.xdc]
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-10072-AMANJIT/dcp/design_1_wrapper_late.xdc]
+Reading XDEF placement.
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1046.715 ; gain = 23.406
+Restoring placement.
+Restored 5471 out of 5471 XDEF sites from archive | CPU: 18.000000 secs | Memory: 0.000000 MB |
+INFO: [Opt 31-138] Pushed 0 inverter(s).
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 357 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 94 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 243 instances
+
+INFO: [Project 1-484] Checkpoint was created with build 881834
+open_checkpoint: Time (s): cpu = 00:02:03 ; elapsed = 00:02:20 . Memory (MB): peak = 1070.633 ; gain = 894.082
+
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+WARNING: [Common 17-348] Failed to get the license for feature 'Implementation' and/or device 'xc7a100t'
+ERROR: [Common 17-345] A valid license was not found for feature 'Implementation' and/or device 'xc7a100t'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+
+    while executing
+"write_bitstream -force design_1_wrapper.bit "
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 28 17:56:56 2015...
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2014.1 (64-bit)
+  **** SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+  **** IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+Command: open_checkpoint design_1_wrapper_routed.dcp
+INFO: [Netlist 29-17] Analyzing 428 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.1
+Loading clock regions from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/Vivado/2014.1/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/Vivado/2014.1/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/Vivado/2014.1/data\parts/xilinx/artix7/ConfigModes.xml
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_early.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc:50]
+get_clocks: Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1003.430 ; gain = 442.992
 INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0.xdc:56]
 WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/device_temp_r[0]_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
@@ -715,28 +861,29 @@ WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
 WARNING: [Constraints 18-402] set_max_delay: 'design_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.sample_timer_en_i_1' is not a valid startpoint. [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/design_1_mig_7series_0_0/user_design/constraints/design_1_mig_7series_0_0.xdc:337]
 Resolution: A valid start point is a main or generated clock pin or port, a clock pin of a sequential cell, or a primary input or inout port. Please validate that all the objects returned by your query belong to this list.
-Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_early.xdc]
-Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper.xdc]
-Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper.xdc]
-Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_late.xdc]
-Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_late.xdc]
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_early.xdc]
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper.xdc]
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper.xdc]
+Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_late.xdc]
+Finished Parsing XDC File [C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_late.xdc]
 Reading XDEF placement.
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1027.063 ; gain = 21.379
+Read XDEF File: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1046.789 ; gain = 23.441
 Restoring placement.
-Restored 4941 out of 4941 XDEF sites from archive | CPU: 9.000000 secs | Memory: 0.000000 MB |
+Restored 5471 out of 5471 XDEF sites from archive | CPU: 20.000000 secs | Memory: 0.000000 MB |
 INFO: [Opt 31-138] Pushed 0 inverter(s).
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 353 instances were transformed.
+  A total of 357 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 94 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 240 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 243 instances
 
 INFO: [Project 1-484] Checkpoint was created with build 881834
-open_checkpoint: Time (s): cpu = 00:01:03 ; elapsed = 00:01:44 . Memory (MB): peak = 1047.613 ; gain = 870.945
+open_checkpoint: Time (s): cpu = 00:02:03 ; elapsed = 00:02:12 . Memory (MB): peak = 1070.680 ; gain = 893.641
 
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
@@ -755,5 +902,5 @@ INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
 INFO: [Common 17-185] WebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:01:27 ; elapsed = 00:03:09 . Memory (MB): peak = 1427.262 ; gain = 379.648
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 19 12:37:25 2015...
+write_bitstream: Time (s): cpu = 00:02:48 ; elapsed = 00:03:04 . Memory (MB): peak = 1454.734 ; gain = 384.055
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 28 18:10:44 2015...

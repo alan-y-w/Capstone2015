@@ -54,8 +54,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_tf
 # IP: bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_intc_0_1 || ORIG_REF_NAME==design_1_axi_intc_0_1}]
 
-# IP: bd/design_1/ip/design_1_compositor_0_0/design_1_compositor_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_compositor_0_0 || ORIG_REF_NAME==design_1_compositor_0_0}]
+# IP: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0}]
+
+# IP: bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_axi_vdma_0_0 || ORIG_REF_NAME==design_1_axi_vdma_0_0}]
+
+# IP: bd/design_1/ip/design_1_OV7670_0_0/design_1_OV7670_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_OV7670_0_0 || ORIG_REF_NAME==design_1_OV7670_0_0}]
 
 # IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0}]
@@ -63,7 +69,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_d
 # IP: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_0 || ORIG_REF_NAME==design_1_auto_pc_0}]
 
-# IP: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci
+# IP: bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_cc_0 || ORIG_REF_NAME==design_1_auto_cc_0}]
 
 # IP: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1.xci
@@ -92,9 +98,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_u
 
 # IP: bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_1 || ORIG_REF_NAME==design_1_auto_us_1}]
-
-# IP: bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_pc_5 || ORIG_REF_NAME==design_1_auto_pc_5}]
 
 # IP: bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_us_2 || ORIG_REF_NAME==design_1_auto_us_2}]
@@ -183,6 +186,22 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_ooc.xdc
 
+# XDC: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0}]
+
+# XDC: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc
+
+# XDC: bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0}]
+
+# XDC: bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc
+set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_vdma_0_0 || ORIG_REF_NAME==design_1_axi_vdma_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_axi_vdma_0_0 || ORIG_REF_NAME==design_1_axi_vdma_0_0}] {/U0 }]/U0 ]]
+
+# XDC: bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_ooc.xdc
+
 # XDC: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc
@@ -190,9 +209,9 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc
 
-# XDC: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc
+# XDC: bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_ooc.xdc
 
-# XDC: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc
+# XDC: bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_cc_0 || ORIG_REF_NAME==design_1_auto_cc_0}] {/inst }]/inst ]]
 
 # XDC: bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc
@@ -227,8 +246,6 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 
 # XDC: bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_us_1 || ORIG_REF_NAME==design_1_auto_us_1}] {/inst }]/inst ]]
-
-# XDC: bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5_ooc.xdc
 
 # XDC: bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_ooc.xdc
 

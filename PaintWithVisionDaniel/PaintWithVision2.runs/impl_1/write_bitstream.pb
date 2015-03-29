@@ -6,7 +6,7 @@ k
 ^
 -Analyzing %s Unisim elements for replacement
 17*netlist2
-4002default:defaultZ29-17
+4282default:defaultZ29-17
 a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
@@ -46,20 +46,20 @@ BC:/Xilinx/Vivado/2014.1/data\./parts/xilinx/artix7/IOStandards.xml2default:de
 Ú
 Parsing XDC File [%s]
 179*designutils2£
-ŽC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_early.xdc2default:defaultZ20-179
+ŽC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_early.xdc2default:defaultZ20-179
 ‚
 %Done setting XDC timing constraints.
 35*timing2¥
 ŽC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0.xdc2default:default2
 502default:default8@Z38-35
-ú
+û
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 get_clocks: 2default:default2
-00:00:272default:default2
-00:00:392default:default2
-988.8552default:default2
-437.2302default:defaultZ17-268
+00:00:502default:default2
+00:00:522default:default2
+1003.4302default:default2
+442.9922default:defaultZ17-268
 ý
 Deriving generated clocks
 2*timing2­
@@ -201,23 +201,23 @@ adesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.s
 ã
 Finished Parsing XDC File [%s]
 178*designutils2£
-ŽC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_early.xdc2default:defaultZ20-178
+ŽC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_early.xdc2default:defaultZ20-178
 Ô
 Parsing XDC File [%s]
 179*designutils2
-ˆC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper.xdc2default:defaultZ20-179
+ˆC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper.xdc2default:defaultZ20-179
 Ý
 Finished Parsing XDC File [%s]
 178*designutils2
-ˆC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper.xdc2default:defaultZ20-178
+ˆC:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper.xdc2default:defaultZ20-178
 Ù
 Parsing XDC File [%s]
 179*designutils2¢
-C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_late.xdc2default:defaultZ20-179
+C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_late.xdc2default:defaultZ20-179
 â
 Finished Parsing XDC File [%s]
 178*designutils2¢
-C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-5804-AMANJIT/dcp/design_1_wrapper_late.xdc2default:defaultZ20-178
+C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.runs/impl_1/.Xil/Vivado-9372-AMANJIT/dcp/design_1_wrapper_late.xdc2default:defaultZ20-178
 6
 Reading XDEF placement.
 206*designutilsZ20-206
@@ -228,33 +228,34 @@ adesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.s
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2$
 Read XDEF File: 2default:default2
-00:00:042default:default2
-00:00:052default:default2
-1027.0632default:default2
-21.3792default:defaultZ17-268
+00:00:082default:default2
+00:00:082default:default2
+1046.7892default:default2
+23.4412default:defaultZ17-268
 3
 Restoring placement.
 754*designutilsZ20-754
-Ý
+Þ
 ORestored %s out of %s XDEF sites from archive | CPU: %s secs | Memory: %s MB |
 403*designutils2
-49412default:default2
-49412default:default2
-9.0000002default:default2
+54712default:default2
+54712default:default2
+	20.0000002default:default2
 0.0000002default:defaultZ20-403
 C
 Pushed %s inverter(s).
 98*opt2
 02default:defaultZ31-138
-°
+Ü
 !Unisim Transformation Summary:
-%s111*project2ó
-Þ  A total of 353 instances were transformed.
+%s111*project2Ÿ
+Š  A total of 357 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 94 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 240 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 243 instances
 2default:defaultZ1-111
 Y
 $Checkpoint was created with build %s293*project2
@@ -263,10 +264,10 @@ $Checkpoint was created with build %s293*project2
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2%
 open_checkpoint: 2default:default2
-00:01:032default:default2
-00:01:442default:default2
-1047.6132default:default2
-870.9452default:defaultZ17-268
+00:02:032default:default2
+00:02:122default:default2
+1070.6802default:default2
+893.6412default:defaultZ17-268
 ›
 @Attempting to get a license for feature '%s' and/or device '%s'
 308*common2"
@@ -331,10 +332,10 @@ Q
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2%
 write_bitstream: 2default:default2
-00:01:272default:default2
-00:03:092default:default2
-1427.2622default:default2
-379.6482default:defaultZ17-268
+00:02:482default:default2
+00:03:042default:default2
+1454.7342default:default2
+384.0552default:defaultZ17-268
 
 
 End Record

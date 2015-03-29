@@ -39,10 +39,125 @@ volatile unsigned int * Done = 		  (unsigned int *)0x44A00010;
 // Amanjit - for some reason the old way of calling a function didn't work
 //           so I just set this register directly. I think the TFT thinks it's
 //           at address 0x44A00000, but that's the compositor's address.
-volatile unsigned int * TFT = (unsigned int *)0x44A10000;
+volatile unsigned int * TFT = (unsigned int *)0x44A00000;
 static XTft TftInstance;
 
+volatile unsigned int * Camera = (unsigned int *)0x44A10000;
+
+volatile unsigned int * VDMA_CR = (unsigned int *)0x44A10030;
+volatile unsigned int * VDMA_AD = (unsigned int *)0x44A100AC;
+volatile unsigned int * VDMA_ST = (unsigned int *)0x44A100A8;
+volatile unsigned int * VDMA_HS = (unsigned int *)0x44A100A4;
+volatile unsigned int * VDMA_VS = (unsigned int *)0x44A100A0;
+
 int main()
+{
+	FillBuffer(0x80000000,0x00FFF000); //yellow
+	*(TFT) = 0x80000000;
+
+	*(VDMA_CR) = 0x1;
+	*(VDMA_AD) = 0x80000000;
+	*(VDMA_ST) = 4096;
+	*(VDMA_HS) = 4*DISPLAY_COLUMNS;
+	*(VDMA_VS) = DISPLAY_ROWS;
+/*
+	*(TFT) = 0x81000000;
+	*(TFT) = 0x80000000;
+	*(TFT) = 0x81000000;
+	*(TFT) = 0x80000000;
+
+	while(1){
+		VDMAWrite(0x80000000);
+		*(VDMA_CR) = 0x0;
+		sleep(1000);
+		*(TFT) = 		0x80000000;
+		VDMAWrite(0x81000000);
+		*(VDMA_CR) = 0x0;
+		sleep(1000);
+		*(TFT) = 		0x81000000;
+	}
+	*/
+	FillBuffer(0x81000000,0x00000000); //yellow
+	*(TFT) = 0x81000000;
+	while(1){
+		int i,j;
+		for(i=0;i<(DISPLAY_COLUMNS);i++){
+			for(j=0;j<(DISPLAY_ROWS);j++){
+				if(*(FrameBuffer0+DISPLAY_ROWS*i+j)>0x00f00000){
+					*(FrameBuffer2+DISPLAY_ROWS*i+j) = 0x00ffffff;
+				}
+			}
+		}
+		sleep(1000);
+	}
+
+
+
+	int foo = *(VDMA_CR);
+	foo = *(VDMA_AD);
+	foo = *(VDMA_ST);
+	foo = *(VDMA_HS);
+	foo = *(VDMA_VS);
+
+	return 0;
+	/*
+	*TFT = FrameBuffer0;
+	*Camera = FrameBuffer0;
+	*(Camera+0x8) = 1;
+	*(Camera+0x8) = 0;
+
+	while(1){
+		*(Camera+0x8) = 1;
+		*(Camera+0x8) = 0;
+
+	}
+
+	return 0;
+	/*
+	init_platform();
+	//XTft_Config *tft = XTft_LookupConfig(0);
+	//int status = XTft_CfgInitialize(&TftInstance, tft, tft->BaseAddress);
+	return 0;
+	*Camera = 0x86000000;
+	//int val = *FrameBuffer0;
+	int i;
+	for(i=0;i<(1<<21); i++)
+		*(FrameBuffer0+i)=0x00fff000;
+	*TFT = FrameBuffer0;
+	*Camera = FrameBuffer0;
+	//Display(FrameBuffer0);
+	//FillBuffer(FrameBuffer0,0x00FFF000);
+	/**Camera = FrameBuffer0;
+	while(1){
+		*(Camera+0x1) = 1;
+		*(Camera+0x1) = 0;
+		int val = *Camera;
+		val = *(Camera+0x1);
+		val = *(FrameBuffer0+20);
+		val = 10;
+		//xil_printf("%d\n",*FrameBuffer0);
+	}
+	//sleep(10000000);
+	*Camera = 0x86000000;
+	int val = *FrameBuffer0;
+	val = *FrameBuffer0;
+	val = *FrameBuffer0;
+	val = *FrameBuffer0;
+
+	return 0;*/
+}
+int VDMAWrite(unsigned int * buffer){
+	*(VDMA_CR) = 0x1;
+	*(VDMA_AD) = buffer;
+	*(VDMA_ST) = 4096;
+	*(VDMA_HS) = 4*DISPLAY_COLUMNS;
+	*(VDMA_VS) = DISPLAY_ROWS;
+	return 0;
+}
+
+
+/*
+int mainOLD()
 {
 	init_platform();
 
@@ -77,7 +192,7 @@ int main()
 		sleep(10000000);
 	}
 	return 0;
-}
+}*/
 // Sleep for a number of processor cycles
 void sleep(int cycles){
 	int i;

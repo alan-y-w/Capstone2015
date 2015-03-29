@@ -1,4 +1,4 @@
-14:02:02 **** Auto Build of project PaintWithVision_code_bsp ****
+18:16:07 **** Auto Build of project PaintWithVision_code_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_0/src"
 make -C microblaze_0/libsrc/bram_v4_0/src -s include -e "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.3 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections"
@@ -42,5 +42,5 @@ rm -rf *.o
 make[2]: Leaving directory `C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/PaintWithVision_code_bsp/microblaze_0/libsrc/uartlite_v3_0/src'
 'Finished building libraries'
 
-14:03:32 Build Finished (took 1m:29s.617ms)
+18:17:29 Build Finished (took 1m:21s.344ms)
 

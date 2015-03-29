@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1424363696">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1427575319">
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
   <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
   <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
@@ -20,10 +20,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/hdl/design_1_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v"/>
-        <Attr Name="ImportTime" Val="1423706021"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,7 +32,9 @@
         <Attr Name="UsedIn" Val="synthesis"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_compositor_0_0/design_1_compositor_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/design_3_Camera_0_0/design_3_Camera_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/ip/oculus_Camera_0_0/oculus_Camera_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_OV7670_0_0/design_1_OV7670_0_0.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -50,6 +50,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/design_1.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

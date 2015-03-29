@@ -3,6 +3,7 @@
 # 
 
   set_param gui.test TreeTableDev
+set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-1
@@ -13,7 +14,10 @@ set_param project.compositeFile.enableAutoGeneration 0
 set_property default_lib xil_defaultlib [current_project]
 set_property ip_repo_paths {
   C:/Users/Amanjit/Desktop/ECE532_git/CustomIP/ip_repo
-  c:/users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0
+  C:/Users/Amanjit/Desktop/ECE532_git/OV7670
+  C:/users/amanjit/desktop/ece532_git/customip/ip_repo/compositor_1.0
+  C:/Users/Amanjit/Desktop/ECE532_git/Oculus/Oculus.srcs/sources_1/bd/oculus
+  C:/users/amanjit/desktop/ece532_git/customip/ip_repo/camerainterface_1.0
 } [current_fileset]
 
 add_files C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1.bd
@@ -50,11 +54,17 @@ set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Deskt
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1_0/design_1_auto_pc_1_ooc.xdc]
@@ -69,14 +79,13 @@ set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Deskt
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property is_locked true [get_files C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/design_1.bd]
 
-read_verilog -library xil_defaultlib C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/imports/hdl/design_1_wrapper.v
+read_verilog -library xil_defaultlib C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
 read_xdc C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/constrs_1/new/design_1.xdc
 set_property used_in_implementation false [get_files C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/constrs_1/new/design_1.xdc]
 

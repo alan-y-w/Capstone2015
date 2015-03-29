@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.1 (win64) Build 881834 Fri Apr  4 14:15:54 MDT 2014
-| Date         : Thu Feb 19 12:15:47 2015
+| Date         : Sat Mar 28 17:42:54 2015
 | Host         : AMANJIT running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file design_1_wrapper_io_placed.rpt
 | Design       : design_1_wrapper
@@ -22,7 +22,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            64 |
+|            81 |
 +---------------+
 
 
@@ -84,7 +84,7 @@ Table of Contents
 | C14        |               | High Range | IO_L1N_T0_AD0N_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | C15        |               | High Range | IO_L12N_T1_MRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | C16        |               | High Range | IO_L20P_T3_A20_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| C17        |               | High Range | IO_L20N_T3_A19_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| C17        | pwdn          | High Range | IO_L20N_T3_A19_15            | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          | NONE             |
 | C18        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | D1         |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | D2         |               | High Range | IO_L14N_T2_SRCC_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
@@ -99,11 +99,11 @@ Table of Contents
 | D11        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | D12        |               | High Range | IO_L6P_T0_15                 | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | D13        |               | High Range | IO_L6N_T0_VREF_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| D14        |               | High Range | IO_L1P_T0_AD0P_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| D14        | OV7670_D[7]   | High Range | IO_L1P_T0_AD0P_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | D15        |               | High Range | IO_L12P_T1_MRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | D16        |               | High Range | VCCO_15                      | VCCO        |                |      15 |            |      |                     |                      |    3.30 |            |           |          |                  |
-| D17        |               | High Range | IO_L16N_T2_A27_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| D18        |               | High Range | IO_L21N_T3_DQS_A18_15        | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| D17        | resetCam      | High Range | IO_L16N_T2_A27_15            | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          | NONE             |
+| D18        | OV7670_D[1]   | High Range | IO_L21N_T3_DQS_A18_15        | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | E1         |               | High Range | IO_L18N_T2_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | E2         |               | High Range | IO_L14P_T2_SRCC_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | E3         | sys_clock     | High Range | IO_L12P_T1_MRCC_35           | INPUT       | LVCMOS33       |      35 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
@@ -119,9 +119,9 @@ Table of Contents
 | E13        |               |            | TDO_0                        | Config      |                |         |            |      |                     |                      |         |            |           |          |                  |
 | E14        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | E15        |               | High Range | IO_L11P_T1_SRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| E16        |               | High Range | IO_L11N_T1_SRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| E17        |               | High Range | IO_L16P_T2_A28_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| E18        |               | High Range | IO_L21P_T3_DQS_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| E16        | OV7670_D[6]   | High Range | IO_L11N_T1_SRCC_15           | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
+| E17        | OV7670_D[0]   | High Range | IO_L16P_T2_A28_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
+| E18        | OV7670_D[3]   | High Range | IO_L21P_T3_DQS_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | F1         |               | High Range | IO_L18P_T2_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | F2         |               | High Range | VCCO_35                      | VCCO        |                |      35 |            |      |                     |                      |    3.30 |            |           |          |                  |
 | F3         |               | High Range | IO_L13N_T2_MRCC_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
@@ -134,12 +134,12 @@ Table of Contents
 | F10        |               |            | VCCBRAM                      | VCCBRAM     |                |         |            |      |                     |                      |         |            |           |          |                  |
 | F11        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | F12        |               |            | VCCAUX                       | VCCAUX      |                |         |            |      |                     |                      |    1.80 |            |           |          |                  |
-| F13        |               | High Range | IO_L5P_T0_AD9P_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| F13        | OV7670_XCLK   | High Range | IO_L5P_T0_AD9P_15            | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          | NONE             |
 | F14        |               | High Range | IO_L5N_T0_AD9N_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | F15        |               | High Range | IO_L14P_T2_SRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| F16        |               | High Range | IO_L14N_T2_SRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| F16        | OV7670_PCLK   | High Range | IO_L14N_T2_SRCC_15           | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | F17        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
-| F18        |               | High Range | IO_L22N_T3_A16_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| F18        | OV7670_D[2]   | High Range | IO_L22N_T3_A16_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | G1         |               | High Range | IO_L17N_T2_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | G2         |               | High Range | IO_L15N_T2_DQS_35            | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | G3         |               | High Range | IO_L20N_T3_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
@@ -152,12 +152,12 @@ Table of Contents
 | G10        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | G11        |               |            | VCCBRAM                      | VCCBRAM     |                |         |            |      |                     |                      |         |            |           |          |                  |
 | G12        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
-| G13        |               | High Range | IO_0_15                      | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| G13        | OV7670_HREF   | High Range | IO_0_15                      | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | G14        |               | High Range | IO_L15N_T2_DQS_ADV_B_15      | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | G15        |               | High Range | VCCO_15                      | VCCO        |                |      15 |            |      |                     |                      |    3.30 |            |           |          |                  |
-| G16        |               | High Range | IO_L13N_T2_MRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| G17        |               | High Range | IO_L18N_T2_A23_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| G18        |               | High Range | IO_L22P_T3_A17_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| G16        | OV7670_VSYNC  | High Range | IO_L13N_T2_MRCC_15           | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
+| G17        | OV7670_D[5]   | High Range | IO_L18N_T2_A23_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
+| G18        | OV7670_D[4]   | High Range | IO_L22P_T3_A17_15            | INPUT       | LVCMOS33       |      15 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | H1         |               | High Range | IO_L17P_T2_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | H2         |               | High Range | IO_L15P_T2_DQS_35            | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |                  |
 | H3         |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
@@ -171,9 +171,9 @@ Table of Contents
 | H11        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | H12        |               |            | VCCAUX                       | VCCAUX      |                |         |            |      |                     |                      |    1.80 |            |           |          |                  |
 | H13        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
-| H14        |               | High Range | IO_L15P_T2_DQS_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| H14        | OV7670_SIOC   | High Range | IO_L15P_T2_DQS_15            | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          | NONE             |
 | H15        |               | High Range | IO_L19N_T3_A21_VREF_15       | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
-| H16        |               | High Range | IO_L13P_T2_MRCC_15           | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
+| H16        | OV7670_SIOD   | High Range | IO_L13P_T2_MRCC_15           | BIDIR       | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      | PULLUP    |          | NONE             |
 | H17        |               | High Range | IO_L18P_T2_A24_15            | User IO     |                |      15 |            |      |                     |                      |         |            |           |          |                  |
 | H18        |               | High Range | VCCO_15                      | VCCO        |                |      15 |            |      |                     |                      |    3.30 |            |           |          |                  |
 | J1         |               | High Range | VCCO_35                      | VCCO        |                |      35 |            |      |                     |                      |    3.30 |            |           |          |                  |
@@ -264,7 +264,7 @@ Table of Contents
 | N14        |               | High Range | IO_L8P_T1_D11_14             | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |                  |
 | N15        |               | High Range | IO_L11P_T1_SRCC_14           | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |                  |
 | N16        |               | High Range | IO_L11N_T1_SRCC_14           | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |                  |
-| N17        |               | High Range | IO_L9P_T1_DQS_14             | User IO     |                |      14 |            |      |                     |                      |         |            |           |          |                  |
+| N17        | BTNC          | High Range | IO_L9P_T1_DQS_14             | INPUT       | LVCMOS33       |      14 |            |      |                     |                 NONE |         | FIXED      |           |          | NONE             |
 | N18        |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | P1         |               |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |                  |
 | P2         | DDR2_ba[0]    | High Range | IO_L15P_T2_DQS_34            | OUTPUT      | SSTL18_II      |      34 |            | FAST |                     |  NP_VTT_50_FP_VTT_50 |         | FIXED      |           |          | NONE             |

@@ -1,6 +1,6 @@
-19:04:21 **** Incremental Build of configuration Debug for project PaintWithVision_code ****
+18:18:46 **** Incremental Build of configuration Debug for project PaintWithVision_code ****
 make all 
 make: Nothing to be done for `all'.
 
-19:04:21 Build Finished (took 335ms)
+18:18:46 Build Finished (took 564ms)
 

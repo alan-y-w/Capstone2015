@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="31" version="2.0">
+<workbench progressCount="36" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="175" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -39,16 +39,14 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.sdk/SDK/SDK_Export/PaintWithVision_code_bsp/system.mss" title="system.mss" tooltip="PaintWithVision_code_bsp/system.mss" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PaintWithVision_code_bsp/system.mss"/>
-</editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" partName="helloworld.c" path="C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/PaintWithVision_code/src/helloworld.c" title="helloworld.c" tooltip="PaintWithVision_code/src/helloworld.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PaintWithVision_code/src/helloworld.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3182" selectionTopPixel="555"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2990" selectionTopPixel="990"/>
 </editor>
 <editor id="com.xilinx.sdk.hw.ui.HwSpecXMLEditor" name="system.xml" partName="system.xml" path="C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2/PaintWithVision2.sdk/SDK/SDK_Export/hw_platform_0/system.xml" title="system.xml" tooltip="hw_platform_0/system.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/hw_platform_0/system.xml"/>
@@ -65,9 +63,22 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/test/src/xintc_tapp_example.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7431" selectionTopPixel="2265"/>
 </editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" partName="platform.c" path="C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/PaintWithVision_code/src/platform.c" title="platform.c" tooltip="PaintWithVision_code/src/platform.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PaintWithVision_code/src/platform.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="3314" selectionTopPixel="710"/>
+</editor>
+<editor id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" partName="system.mss" path="C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.sdk/SDK/SDK_Export/PaintWithVision_code_bsp/system.mss" title="system.mss" tooltip="PaintWithVision_code_bsp/system.mss" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/PaintWithVision_code_bsp/system.mss"/>
+</editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.ModuleView" partName="Modules">
+<viewState/>
+</view>
 <view id="com.xilinx.sdk.targetmanager.ui.TargetManagementView" partName="Target Connections">
+<viewState/>
+</view>
+<view id="org.eclipse.debug.ui.MemoryView" partName="Memory">
 <viewState/>
 </view>
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal 1">
@@ -129,14 +140,15 @@
 <view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
 <viewState/>
 </view>
+<view id="org.eclipse.debug.ui.RegisterView" partName="Registers">
+<viewState/>
+</view>
 <view id="com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsoleView" partName="XSDB Console"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Errors (3 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -337,8 +349,11 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="com.xilinx.sdk.targetmanager.ui.XmdConsoleView"/>
 <view id="com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsoleView"/>
+<view id="org.eclipse.debug.ui.RegisterView"/>
+<view id="org.eclipse.debug.ui.ModuleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="com.xilinx.sdk.logger.SdkLogView"/>
+<view id="org.eclipse.debug.ui.MemoryView"/>
 <view id="com.xilinx.sdk.targetmanager.ui.TargetManagementView"/>
 <fastViewBars/>
 <layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
@@ -359,9 +374,10 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@43df2ceb" ratio="0.5998744" ratioLeft="955" ratioRight="637" relationship="2" relative="org.eclipse.ui.internal.ViewStack@70fe1b1c">&#x0A;<folder activePageID="com.xilinx.sdk.logger.SdkLogView" appearance="2" expanded="2">&#x0A;<page content="com.xilinx.sdk.logger.SdkLogView" label="SDK Log"/>
-<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@43df2ceb" ratio="0.5998744" ratioLeft="955" ratioRight="637" relationship="2" relative="org.eclipse.ui.internal.ViewStack@70fe1b1c">&#x0A;<folder activePageID="org.eclipse.debug.ui.MemoryView" appearance="2" expanded="2">&#x0A;<page content="com.xilinx.sdk.logger.SdkLogView" label="SDK Log"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="Memory"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -397,14 +413,16 @@
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="com.xilinx.sdk.targetmanager.ui.XmdConsoleView" label="XMD Console"/>
 <page content="com.xilinx.sdk.targetmanager.ui.xsdb.XSDBConsoleView" label="XSDB Console"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="Modules"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
-<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
-<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -418,151 +436,154 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/PaintWithVision_code/src/helloworld.c"/>
 </editors>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3157" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3180" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2876" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2434" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2658" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2681" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2913" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2952" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="4170" y="0"/>
+<position info="not_deleted" x="2470" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2490" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2434" y="0"/>
+<position info="not_deleted" x="2523" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2658" y="0"/>
+<position info="not_deleted" x="2831" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2681" y="0"/>
+<position info="not_deleted" x="3122" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2913" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2952" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3010" y="0"/>
+<position info="not_deleted" x="2876" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3035" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1886" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2876" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2434" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2657" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2681" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2913" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2952" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3010" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3035" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3074" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3132" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3157" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3164" y="0"/>
+<position info="not_deleted" x="2470" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3183" y="0"/>
+<position info="not_deleted" x="2490" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2913" y="0"/>
+<position info="not_deleted" x="2156" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2952" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3010" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3035" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3074" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3180" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2470" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2681" y="0"/>
+<position info="not_deleted" x="2337" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3703" y="0"/>
+<position info="not_deleted" x="6125" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2357" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3675" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2425" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="1984" y="0"/>
+<position info="not_deleted" x="2444" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2681" y="0"/>
+<position info="not_deleted" x="2470" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2913" y="0"/>
+<position info="not_deleted" x="2490" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="2952" y="0"/>
+<position info="not_deleted" x="2523" y="0"/>
 </item>
 <item historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3010" y="0"/>
+<position info="not_deleted" x="2831" y="0"/>
+</item>
+<item historyLabel="helloworld.c" index="0">
+<position info="not_deleted" x="2956" y="0"/>
 </item>
 <item active="true" historyLabel="helloworld.c" index="0">
-<position info="not_deleted" x="3035" y="0"/>
+<position info="not_deleted" x="2990" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -581,6 +602,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.xilinx.sdk.sw.MSSEditor" name="system.mss" tooltip="PaintWithVision_code_bsp/system.mss">
+<persistable path="/PaintWithVision_code_bsp/system.mss"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="PaintWithVision_code/src/platform.c">
+<persistable path="/PaintWithVision_code/src/platform.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="xtft.c" tooltip="PaintWithVision_code_bsp/microblaze_0/libsrc/tft_v5_0/src/xtft.c">
 <persistable path="/PaintWithVision_code_bsp/microblaze_0/libsrc/tft_v5_0/src/xtft.c"/>
 </file>
@@ -619,12 +646,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="helloworld.c" tooltip="DanDaMan/src/helloworld.c">
 <persistable path="/DanDaMan/src/helloworld.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.h" tooltip="PaintWithVision_code/src/platform.h">
-<persistable path="/PaintWithVision_code/src/platform.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="platform.c" tooltip="PaintWithVision_code/src/platform.c">
-<persistable path="/PaintWithVision_code/src/platform.c"/>
 </file>
 </mruList>
 </workbench>

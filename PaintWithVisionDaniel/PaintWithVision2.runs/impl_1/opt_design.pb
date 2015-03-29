@@ -39,7 +39,7 @@ BPlease refer to the DRC report (report_drc) for more information.
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:02 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:03 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
 X
 
 Starting %s Task
@@ -60,13 +60,13 @@ B
 49*opt2
 02default:defaultZ31-49
 3
-'Phase 1 Retarget | Checksum: 1ce61c7af
+'Phase 1 Retarget | Checksum: 21d5d3878
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
 l
 
 Phase %s%s
@@ -76,19 +76,19 @@ Phase %s%s
 D
 Pushed %s inverter(s).
 98*opt2
-432default:defaultZ31-138
+372default:defaultZ31-138
 C
 Eliminated %s cells.
 10*opt2
-17682default:defaultZ31-10
+13482default:defaultZ31-10
 ?
-3Phase 2 Constant Propagation | Checksum: 1254afa65
+3Phase 2 Constant Propagation | Checksum: 2120de21e
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
 ]
 
 Phase %s%s
@@ -98,32 +98,32 @@ Phase %s%s
 N
  Eliminated %s unconnected nets.
 12*opt2
-61062default:defaultZ31-12
-P
+51132default:defaultZ31-12
+O
 !Eliminated %s unconnected cells.
-11*opt2
-101532default:defaultZ31-11
+11*opt2
+85422default:defaultZ31-11
 0
-$Phase 3 Sweep | Checksum: 261871a97
+$Phase 3 Sweep | Checksum: 21803154c
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:48 ; elapsed = 00:00:48 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
 A
-5Ending Logic Optimization Task | Checksum: 261871a97
+5Ending Logic Optimization Task | Checksum: 21803154c
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:44 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
-7
-+Implement Debug Cores | Checksum: f32f649f
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:49 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
+8
+,Implement Debug Cores | Checksum: 190ad5049
 *common
-4
-(Logic Optimization | Checksum: f32f649f
+5
+)Logic Optimization | Checksum: 190ad5049
 *common
 X
 
@@ -272,13 +272,13 @@ adesign_1_i/mig_7series_0/temp_mon_enabled.u_tempmon/xadc_supplied_temperature.s
 %Done setting XDC timing constraints.
 35*timingZ38-35
 D
-8Ending PowerOpt TimerUpdates Task | Checksum: 261871a97
+8Ending PowerOpt TimerUpdates Task | Checksum: 21803154c
 *common
 †
 
 %s
 *constraints2o
-[Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1063.355 ; gain = 0.0002default:default
+[Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1076.965 ; gain = 0.0002default:default
 4
 Applying IDT optimizations ...
 9*pwroptZ34-9
@@ -288,30 +288,30 @@ D
 
 
 *pwropt
-é
+ê
 ¡WRITE_MODE attribute of %s BRAM(s) out of a total of %s has been updated to save power.
     Run report_power_opt to get a complete listing of the BRAMs updated.
 129*pwropt2
-02default:default2
-32default:defaultZ34-162
+02default:default2
+112default:defaultZ34-162
 [
 +Structural ODC has moved %s WE to EN ports
 155*pwropt2
 02default:defaultZ34-201
-Ÿ
+ 
 CNumber of BRAM Ports augmented: %s newly gated: %s Total Ports: %s
 65*pwropt2
-02default:default2
-02default:default2
-62default:defaultZ34-65
+42default:default2
+02default:default2
+222default:defaultZ34-65
 A
-5Ending Power Optimization Task | Checksum: 261871a97
+5Ending Power Optimization Task | Checksum: 1fd76b698
 *common
-‡
+ˆ
 
 %s
-*constraints2p
-\Time (s): cpu = 00:00:00 ; elapsed = 00:00:24 . Memory (MB): peak = 1160.680 ; gain = 97.3242default:default
+*constraints2q
+]Time (s): cpu = 00:00:00 ; elapsed = 00:00:35 . Memory (MB): peak = 1193.500 ; gain = 116.5352default:default
 Q
 Releasing license: %s
 83*common2"
@@ -328,14 +328,14 @@ S
 29*	vivadotcl2
 
 opt_design2default:defaultZ4-42
-ú
+û
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 opt_design: 2default:default2
-00:01:092default:default2
-00:02:132default:default2
-1160.6802default:default2
-97.3242default:defaultZ17-268
+00:01:262default:default2
+00:01:492default:default2
+1193.5002default:default2
+116.5352default:defaultZ17-268
 4
 Writing XDEF routing.
 211*designutilsZ20-211
@@ -350,16 +350,16 @@ I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2)
 Write XDEF Complete: 2default:default2
 00:00:012default:default2
-00:00:012default:default2
-1160.6802default:default2
+00:00:022default:default2
+1193.5002default:default2
 0.0002default:defaultZ17-268
 ÿ
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2&
 write_checkpoint: 2default:default2
-00:00:082default:default2
-00:00:112default:default2
-1160.6802default:default2
+00:00:102default:default2
+00:00:132default:default2
+1193.5002default:default2
 0.0002default:defaultZ17-268
 
 

@@ -281,7 +281,7 @@ BEGIN
       C_DEFAULT_TFT_BASE_ADDR => X"F0000000",
       C_M_AXI_ADDR_WIDTH => 32,
       C_M_AXI_DATA_WIDTH => 32,
-      C_MAX_BURST_LEN => 16
+      C_MAX_BURST_LEN => 256
     )
     PORT MAP (
       s_axi_aclk => s_axi_aclk,

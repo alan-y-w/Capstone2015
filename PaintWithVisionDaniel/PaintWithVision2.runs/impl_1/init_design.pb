@@ -10,7 +10,7 @@ a
 ^
 -Analyzing %s Unisim elements for replacement
 17*netlist2
-4112default:defaultZ29-17
+4392default:defaultZ29-17
 a
 2Unisim Transformation completed in %s CPU seconds
 28*netlist2
@@ -97,10 +97,10 @@ $Parsing XDC File [%s] for cell '%s'
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 get_clocks: 2default:default2
-00:00:392default:default2
-00:00:462default:default2
-1029.7272default:default2
-453.5232default:defaultZ17-268
+00:00:452default:default2
+00:00:492default:default2
+1040.6332default:default2
+457.1562default:defaultZ17-268
 š
 -Finished Parsing XDC File [%s] for cell '%s'
 847*designutils2£
@@ -364,6 +364,36 @@ $Parsing XDC File [%s] for cell '%s'
 847*designutils2­
 ˜c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1.xdc2default:default2,
 design_1_i/axi_intc_0/U02default:defaultZ20-847
+¯
+$Parsing XDC File [%s] for cell '%s'
+848*designutils2¹
+¤c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc2default:default2/
+design_1_i/proc_sys_reset_02default:defaultZ20-848
+¸
+-Finished Parsing XDC File [%s] for cell '%s'
+847*designutils2¹
+¤c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc2default:default2/
+design_1_i/proc_sys_reset_02default:defaultZ20-847
+µ
+$Parsing XDC File [%s] for cell '%s'
+848*designutils2¿
+ªc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc2default:default2/
+design_1_i/proc_sys_reset_02default:defaultZ20-848
+¾
+-Finished Parsing XDC File [%s] for cell '%s'
+847*designutils2¿
+ªc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc2default:default2/
+design_1_i/proc_sys_reset_02default:defaultZ20-847
+ 
+$Parsing XDC File [%s] for cell '%s'
+848*designutils2­
+˜c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc2default:default2,
+design_1_i/axi_vdma_0/U02default:defaultZ20-848
+©
+-Finished Parsing XDC File [%s] for cell '%s'
+847*designutils2­
+˜c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0.xdc2default:default2,
+design_1_i/axi_vdma_0/U02default:defaultZ20-847
 ´
 Parsing XDC File [%s]
 179*designutils2~
@@ -386,10 +416,10 @@ $Parsing XDC File [%s] for cell '%s'
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2 
 get_clocks: 2default:default2
-00:00:112default:default2
-00:00:072default:default2
-1050.4022default:default2
-6.4962default:defaultZ17-268
+00:00:132default:default2
+00:00:082default:default2
+1063.7072default:default2
+4.1172default:defaultZ17-268
 ­
 -Finished Parsing XDC File [%s] for cell '%s'
 847*designutils2²
@@ -405,6 +435,16 @@ $Parsing XDC File [%s] for cell '%s'
 847*designutils2´
 Ÿc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_1/design_1_axi_intc_0_1_clocks.xdc2default:default2,
 design_1_i/axi_intc_0/U02default:defaultZ20-847
+§
+$Parsing XDC File [%s] for cell '%s'
+848*designutils2´
+Ÿc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc2default:default2,
+design_1_i/axi_vdma_0/U02default:defaultZ20-848
+°
+-Finished Parsing XDC File [%s] for cell '%s'
+847*designutils2´
+Ÿc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_clocks.xdc2default:default2,
+design_1_i/axi_vdma_0/U02default:defaultZ20-847
 Å
 $Parsing XDC File [%s] for cell '%s'
 848*designutils2®
@@ -415,15 +455,15 @@ $Parsing XDC File [%s] for cell '%s'
 847*designutils2®
 ™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc2default:default2P
 <design_1_i/microblaze_0_axi_periph/m00_couplers/auto_ds/inst2default:defaultZ20-847
-Å
+Ç
 $Parsing XDC File [%s] for cell '%s'
-848*designutils2®
-™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc2default:default2P
+848*designutils2°
+›c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc2default:default2P
 <design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst2default:defaultZ20-848
-Î
+Ð
 -Finished Parsing XDC File [%s] for cell '%s'
-847*designutils2®
-™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_clocks.xdc2default:default2P
+847*designutils2°
+›c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_cc_0_0/design_1_auto_cc_0_clocks.xdc2default:default2P
 <design_1_i/microblaze_0_axi_periph/m01_couplers/auto_cc/inst2default:defaultZ20-847
 Å
 $Parsing XDC File [%s] for cell '%s'
@@ -449,12 +489,12 @@ $Parsing XDC File [%s] for cell '%s'
 $Parsing XDC File [%s] for cell '%s'
 848*designutils2®
 ™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc2default:default2P
-<design_1_i/microblaze_0_axi_periph/m04_couplers/auto_ds/inst2default:defaultZ20-848
+<design_1_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst2default:defaultZ20-848
 Î
 -Finished Parsing XDC File [%s] for cell '%s'
 847*designutils2®
 ™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3_clocks.xdc2default:default2P
-<design_1_i/microblaze_0_axi_periph/m04_couplers/auto_ds/inst2default:defaultZ20-847
+<design_1_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst2default:defaultZ20-847
 Å
 $Parsing XDC File [%s] for cell '%s'
 848*designutils2®
@@ -479,12 +519,12 @@ $Parsing XDC File [%s] for cell '%s'
 $Parsing XDC File [%s] for cell '%s'
 848*designutils2®
 ™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc2default:default2P
-<design_1_i/microblaze_0_axi_periph/s02_couplers/auto_us/inst2default:defaultZ20-848
+<design_1_i/microblaze_0_axi_periph/s03_couplers/auto_us/inst2default:defaultZ20-848
 Î
 -Finished Parsing XDC File [%s] for cell '%s'
 847*designutils2®
 ™c:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2_clocks.xdc2default:default2P
-<design_1_i/microblaze_0_axi_periph/s02_couplers/auto_us/inst2default:defaultZ20-847
+<design_1_i/microblaze_0_axi_periph/s03_couplers/auto_us/inst2default:defaultZ20-847
 C
 Pushed %s inverter(s).
 98*opt2
@@ -496,24 +536,25 @@ t
 
 MSuccessfully populated the BRAM INIT strings from the following elf files: %s96*memdata2´
 Ÿc:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/PaintWithVision2.srcs/sources_1/ipshared/xilinx.com/microblaze_v9_3/7b6e2d75/data/mb_bootloop_le.elf 2default:defaultZ28-144
-±
+Ý
 !Unisim Transformation Summary:
-%s111*project2ô
-ß  A total of 363 instances were transformed.
+%s111*project2 
+‹  A total of 367 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT, IBUFDS_INTERMDISABLE_INT, INV, OBUFTDS, OBUFTDS): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 104 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
-  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 240 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 243 instances
 2default:defaultZ1-111
 ü
 I%sTime (s): cpu = %s ; elapsed = %s . Memory (MB): peak = %s ; gain = %s
 268*common2!
 link_design: 2default:default2
-00:01:422default:default2
+00:02:012default:default2
 00:02:102default:default2
-1063.3552default:default2
-876.3952default:defaultZ17-268
+1076.9652default:default2
+890.2932default:defaultZ17-268
 
 
 End Record

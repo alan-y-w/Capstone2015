@@ -215,7 +215,7 @@ ARCHITECTURE design_1_axi_tft_0_0_arch OF design_1_axi_tft_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_axi_tft_0_0_arch : ARCHITECTURE IS "design_1_axi_tft_0_0,axi_tft,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_tft_0_0_arch: ARCHITECTURE IS "design_1_axi_tft_0_0,axi_tft,{x_ipProduct=Vivado 2014.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_tft,x_ipVersion=2.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,C_FAMILY=artix7,C_TFT_INTERFACE=0,C_EN_I2C_INTF=0,C_I2C_SLAVE_ADDR=0x76,C_DEFAULT_TFT_BASE_ADDR=0xF0000000,C_M_AXI_ADDR_WIDTH=32,C_M_AXI_DATA_WIDTH=32,C_MAX_BURST_LEN=16}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_tft_0_0_arch: ARCHITECTURE IS "design_1_axi_tft_0_0,axi_tft,{x_ipProduct=Vivado 2014.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_tft,x_ipVersion=2.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,C_FAMILY=artix7,C_TFT_INTERFACE=0,C_EN_I2C_INTF=0,C_I2C_SLAVE_ADDR=0x76,C_DEFAULT_TFT_BASE_ADDR=0xF0000000,C_M_AXI_ADDR_WIDTH=32,C_M_AXI_DATA_WIDTH=32,C_MAX_BURST_LEN=256}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
@@ -287,7 +287,7 @@ BEGIN
       C_DEFAULT_TFT_BASE_ADDR => X"F0000000",
       C_M_AXI_ADDR_WIDTH => 32,
       C_M_AXI_DATA_WIDTH => 32,
-      C_MAX_BURST_LEN => 16
+      C_MAX_BURST_LEN => 256
     )
     PORT MAP (
       s_axi_aclk => s_axi_aclk,
