@@ -76,7 +76,7 @@ int main()
 		sleep(1000);
 		*(TFT) = 		0x81000000;
 	}
-	*/
+	/* Simple detection code
 	FillBuffer(0x81000000,0x00000000); //yellow
 	*(TFT) = 0x81000000;
 	while(1){
@@ -98,7 +98,7 @@ int main()
 	foo = *(VDMA_ST);
 	foo = *(VDMA_HS);
 	foo = *(VDMA_VS);
-
+	*/
 	return 0;
 	/*
 	*TFT = FrameBuffer0;
