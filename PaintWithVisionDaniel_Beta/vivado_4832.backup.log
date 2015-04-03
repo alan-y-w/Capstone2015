@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2014.1 (64-bit)
+# SW Build 881834 on Fri Apr  4 14:15:54 MDT 2014
+# IP Build 877625 on Fri Mar 28 16:29:15 MDT 2014
+# Start of session at: Tue Feb 17 16:08:16 2015
+# Process ID: 1328
+# Log file: C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel/vivado.log
+# Journal file: C:/Users/Amanjit/Desktop/ECE532_git/PaintWithVisionDaniel\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\Users\Amanjit\Desktop\ECE532_git\PaintWithVisionDaniel\PaintWithVision2.xpr}
+INFO: [Project 1-313] Project file moved from 'C:/Users/Daniel/Documents/Uoft_hw/ECE532/PaintWithVision2' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2014.1/data/ip'.
+open_project: Time (s): cpu = 00:01:03 ; elapsed = 00:00:37 . Memory (MB): peak = 1051.766 ; gain = 232.273
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 17 16:31:18 2015...

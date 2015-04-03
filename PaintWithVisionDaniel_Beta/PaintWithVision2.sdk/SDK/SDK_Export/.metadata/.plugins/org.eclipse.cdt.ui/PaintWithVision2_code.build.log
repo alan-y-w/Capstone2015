@@ -1,0 +1,26 @@
+13:33:35 **** Build of configuration Debug for project PaintWithVision2_code ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../PaintWithVision2_code_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../PaintWithVision2_code_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: PaintWithVision2_code.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../PaintWithVision2_code_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "PaintWithVision2_code.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: PaintWithVision2_code.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size PaintWithVision2_code.elf  |tee "PaintWithVision2_code.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2364	    268	   2084	   4716	   126c	PaintWithVision2_code.elf
+'Finished building: PaintWithVision2_code.elf.size'
+' '
+
+13:33:36 Build Finished (took 1s.653ms)
+
