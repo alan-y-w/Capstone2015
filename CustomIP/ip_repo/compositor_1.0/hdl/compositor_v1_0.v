@@ -76,6 +76,9 @@
 // Instantiation of Axi Bus Interface S_AXI
     wire [31:0] FrBBaseAddress, DrBBaseAddress, DpBBaseAddress, ready;
     wire done;
+    wire [31:0] threshold;
+    wire [31:0] x_pos, y_pos;
+    
 	compositor_v1_0_S_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH),
 		.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH)
@@ -85,10 +88,12 @@
         .slv_reg2(DpBBaseAddress),
         .slv_reg3(ready),
         .slv_reg4(),
-        .slv_reg5(),
+        .slv_reg5(threshold),
         .slv_reg6(),
         .slv_reg7(),
         .done({31'b0,done}),
+        .x_pos(x_pos),
+        .y_pos(y_pos),
 		.S_AXI_ACLK(s_axi_aclk),
 		.S_AXI_ARESETN(s_axi_aresetn),
 		.S_AXI_AWADDR(s_axi_awaddr),
@@ -122,6 +127,9 @@
         .DispBufferBaseAddress(DpBBaseAddress),
         .ready(ready[0]),
         .done(done),
+        .threshold(threshold),
+        .x_pos(x_pos),
+        .y_pos(y_pos),
 		.M_AXI_ACLK(m_axi_aclk),
 		.M_AXI_ARESETN(m_axi_aresetn),
 		.M_AXI_AWADDR(m_axi_awaddr),

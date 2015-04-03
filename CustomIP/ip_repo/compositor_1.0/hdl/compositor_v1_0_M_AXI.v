@@ -16,6 +16,9 @@
 	    input wire [31:0] DispBufferBaseAddress,
 	    input wire ready,
 	    output reg done,
+	    input wire [31:0] threshold,
+	    output wire [31:0] x_pos,
+	    output wire [31:0] y_pos,
 	    
 		// AXI clock signal
 		input wire  M_AXI_ACLK,
@@ -319,12 +322,14 @@
 	wire [31:0] DpBVal;
 	wire sweep_complete;
 	wire start;
+	wire [21:0] index_val;
 	reg next_addr;
 	
 	AddressGenerator AG(
         .FrameBufferAddr(FrBAddr),
         .DrawBufferAddr(DrBAddr),
         .DispBufferAddr(DpBAddr),
+        .index_val(index_val),
         .FrameBufferAddrBase(FrameBufferBaseAddress),
         .DrawBufferAddrBase(DrawBufferBaseAddress),
         .DispBufferAddrBase(DispBufferBaseAddress),
@@ -344,7 +349,20 @@
         .in(ready),
         .out(start)
         );
-
+        
+     PixelFilter PF (
+        .clk(M_AXI_ACLK),
+        .rst(M_AXI_ARESETN),
+        .FrameBufferValue(FrBVal),
+        .sweep_complete(sweep_complete&done),
+        .FrBAddr(FrBAddr),
+        .index_val(index_val),
+        .threshold(threshold),
+        .x_pos(x_pos),
+        .y_pos(y_pos),
+        .start(start),
+        .valid(next_addr)
+        );
 // ----------------------------------------------------------------------------
 //                  M A I N   C O N T R O L   L O G I C
 // ----------------------------------------------------------------------------         
@@ -365,8 +383,9 @@
         axi_araddr <= axi_araddr;  
         FrBVal <= FrBVal;
         DrBVal <= DrBVal;  
-        next_addr <= 0;      
-        DpBAddrHold <= DpBAddrHold;                                          
+        next_addr <= 1'b0;      
+        DpBAddrHold <= DpBAddrHold;
+//        threshold_reg <= 0;                                          
       end                                                                           
     else                                                                            
       begin                                                                         
@@ -383,20 +402,21 @@
               end
             else
               begin
-                mst_exec_state  <= IDLE;
-              end                                                                     
+                mst_exec_state  <= IDLE;    
+              end
+            done <= 1'b1;                                                                                 
             start_single_write <= 1'b0;
             start_single_read  <= 1'b0;                                                   
             write_issued  <= 1'b0;                                                                        
-            read_issued   <= 1'b0;                                                      
-            done <= 1'b1;    
+            read_issued   <= 1'b0;       
             axi_awaddr <= axi_awaddr;
             axi_wdata <= axi_wdata;    
             axi_araddr <= axi_araddr;  
             FrBVal <= FrBVal;
             DrBVal <= DrBVal;
-            next_addr <= 0;
+            next_addr <= 1'b0;
             DpBAddrHold <= DpBAddrHold;
+//            threshold_reg <= threshold;
           end
               
                                                                                     
@@ -412,7 +432,8 @@
                 FrBVal <= FrBVal;
                 axi_araddr <= FrBAddr;
               end
-            else if (axi_rready) // read done, continue 
+//            else if (axi_rready) // read done, continue 
+              else if (M_AXI_RVALID && ~axi_rready)
               begin
                 start_single_read <= 1'b0;
                 read_issued <= 1'b0;
@@ -434,8 +455,9 @@
             axi_awaddr <= axi_awaddr;
             axi_wdata <= axi_wdata;  
             done <= 1'b0; 
-            next_addr <= 0;
+            next_addr <= 1'b0;
             DpBAddrHold <= DpBAddr;
+//            threshold_reg <= threshold_reg;
           end                                                                         
         
                                                                                     
@@ -451,7 +473,8 @@
               DrBVal <= DrBVal;
               axi_araddr <= DrBAddr;
             end
-            else if (axi_rready) // read done, continue 
+//            else if (axi_rready) // read done, continue 
+            else if (M_AXI_RVALID && ~axi_rready)
             begin
               start_single_read <= 1'b0;
               read_issued <= 1'b0;
@@ -473,8 +496,9 @@
             axi_awaddr <= axi_awaddr;
             axi_wdata <= axi_wdata; 
             done <= 1'b0;
-            next_addr <= 0;
+            next_addr <= 1'b0;
             DpBAddrHold <= DpBAddrHold;
+//            threshold_reg <= threshold_reg;
           end                                                    
 
 
@@ -494,6 +518,7 @@
             done <= 1'b0;
             DpBAddrHold <= DpBAddrHold;
             next_addr <= 1'b1; // get next address
+//            threshold_reg <= threshold_reg;
           end
           
           
@@ -508,16 +533,19 @@
               mst_exec_state <= WRITE;
               axi_awaddr <= DpBAddrHold;
               axi_wdata <= DpBVal;
+              done <= 1'b0;
             end
             else if (axi_bready) // read done, continue 
             begin
               if (sweep_complete)
                 begin
                   mst_exec_state <= IDLE;
+                  done <= 1'b1;
                 end
               else
                 begin
                   mst_exec_state <= READ_FB;
+                  done <= 1'b0;
                 end
               start_single_write <= 1'b0;
               write_issued <= 1'b0;
@@ -531,15 +559,17 @@
               mst_exec_state <= WRITE;
               axi_awaddr <= axi_awaddr;
               axi_wdata <= axi_wdata;
+              done <= 1'b0;
             end
             axi_araddr <= axi_araddr;
             start_single_read <= 1'b0;
             read_issued <= 1'b0;
             FrBVal <= FrBVal;
             DrBVal <= DrBVal;  
-            done <= 1'b0;
-            next_addr <= 0;
+//            done <= 1'b0;
+            next_addr <= 1'b0;
             DpBAddrHold <= DpBAddrHold;
+//            threshold_reg <= threshold_reg;
           end                                    
           
       
@@ -556,8 +586,9 @@
             axi_araddr <= axi_araddr;  
             FrBVal <= FrBVal;
             DrBVal <= DrBVal;  
-            next_addr <= 0; 
+            next_addr <= 1'b0; 
             DpBAddrHold <= DpBAddrHold; 
+//            threshold_reg <= threshold_reg;
           end      
           
                                                  

@@ -24,6 +24,8 @@
         output reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg6,
         output reg [C_S_AXI_DATA_WIDTH-1:0]    slv_reg7,
         input wire [31:0] done,
+        input wire [31:0] x_pos,
+        input wire [31:0] y_pos,
 		// User ports ends
 		// Do not modify the ports beyond this line
 
@@ -220,6 +222,13 @@
 	// and the slave is ready to accept the write address and write data.
 	assign slv_reg_wren = axi_wready && S_AXI_WVALID && axi_awready && S_AXI_AWVALID;
 
+always @( posedge S_AXI_ACLK )
+begin
+	slv_reg6 <= x_pos;
+	slv_reg7 <= y_pos;
+	slv_reg4 <= done;
+end
+	
 	always @( posedge S_AXI_ACLK )
 	begin
 	  if ( S_AXI_ARESETN == 1'b0 )
@@ -228,10 +237,9 @@
 	      slv_reg1 <= 0;
 	      slv_reg2 <= 0;
 	      slv_reg3 <= 0;
-	      slv_reg4 <= done;
 	      slv_reg5 <= 0;
-	      slv_reg6 <= 0;
-	      slv_reg7 <= 0;
+	      //slv_reg6 <= x_pos;
+	      //slv_reg7 <= y_pos;
 	    end 
 	  else begin
 	    if (slv_reg_wren)
@@ -271,7 +279,7 @@
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 4
 	                //slv_reg4[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
-	                slv_reg4 <= done;
+//	                slv_reg4 <= done;
 	              end  
 	          3'h5:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
@@ -285,24 +293,24 @@
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 6
-	                slv_reg6[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	                //slv_reg6[(byte_index*8) +: 8] <= x_pos;
 	              end  
 	          3'h7:
 	            for ( byte_index = 0; byte_index <= (C_S_AXI_DATA_WIDTH/8)-1; byte_index = byte_index+1 )
 	              if ( S_AXI_WSTRB[byte_index] == 1 ) begin
 	                // Respective byte enables are asserted as per write strobes 
 	                // Slave register 7
-	                slv_reg7[(byte_index*8) +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+	                //slv_reg7[(byte_index*8) +: 8] <= y_pos;
 	              end  
 	          default : begin
 	                      slv_reg0 <= slv_reg0;
 	                      slv_reg1 <= slv_reg1;
 	                      slv_reg2 <= slv_reg2;
 	                      slv_reg3 <= slv_reg3;
-	                      slv_reg4 <= done;
+//	                      slv_reg4 <= done;
 	                      slv_reg5 <= slv_reg5;
-	                      slv_reg6 <= slv_reg6;
-	                      slv_reg7 <= slv_reg7;
+	                      //slv_reg6 <= x_pos;
+	                      //slv_reg7 <= y_pos;
 	                    end
 	        endcase
 	      end
