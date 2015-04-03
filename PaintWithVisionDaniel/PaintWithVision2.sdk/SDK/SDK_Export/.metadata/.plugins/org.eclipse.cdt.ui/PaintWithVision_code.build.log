@@ -1,6 +1,60 @@
-18:18:46 **** Incremental Build of configuration Debug for project PaintWithVision_code ****
+11:58:49 **** Auto Build of configuration Debug for project PaintWithVision_code ****
 make all 
-make: Nothing to be done for `all'.
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../PaintWithVision_code_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:9:0:
+../src/constants.h: In function 'Display':
+../src/constants.h:39:8: warning: assignment makes integer from pointer without a cast [enabled by default]
+  *(TFT)=buffer;
+        ^
+../src/constants.h: In function 'VDMAInit':
+../src/constants.h:106:13: warning: assignment makes integer from pointer without a cast [enabled by default]
+  *(VDMA_AD) = buffer;
+             ^
+../src/main.c: In function 'main':
+../src/main.c:17:2: warning: passing argument 1 of 'VDMAInit' discards 'volatile' qualifier from pointer target type [enabled by default]
+  VDMAInit(FrameBuffer);
+  ^
+In file included from ../src/main.c:9:0:
+../src/constants.h:104:6: note: expected 'unsigned int *' but argument is of type 'volatile unsigned int *'
+ void VDMAInit(unsigned int * buffer)
+      ^
+../src/main.c: In function 'OnePass':
+../src/main.c:115:35: warning: initialization from incompatible pointer type [enabled by default]
+          unsigned short *label  = ddr_label;
+                                   ^
+../src/main.c:153:29: warning: unused variable 'smallest_lable' [-Wunused-variable]
+                         int smallest_lable = cur_label;
+                             ^
+../src/main.c: In function 'ProcessFrame':
+../src/main.c:317:26: warning: unused variable 'blob' [-Wunused-variable]
+              struct Blob blob = vector_get(&blobList, i);
+                          ^
+../src/main.c:313:25: warning: unused variable 'finalBlob' [-Wunused-variable]
+             struct Blob finalBlob;
+                         ^
+../src/main.c:309:17: warning: unused variable 'cur_distance' [-Wunused-variable]
+             int cur_distance = DISPLAY_ROWS * DISPLAY_COLUMNS;
+                 ^
+../src/main.c:302:18: warning: unused variable 'tar_color_b' [-Wunused-variable]
+             char tar_color_b = 0x07;
+                  ^
+../src/main.c:301:18: warning: unused variable 'tar_color_g' [-Wunused-variable]
+             char tar_color_g = 0x0;
+                  ^
+../src/main.c:300:18: warning: unused variable 'tar_color_r' [-Wunused-variable]
+             char tar_color_r = 0x0;
+                  ^
+'Finished building: ../src/main.c'
+' '
+'Building target: PaintWithVision_code.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../PaintWithVision_code_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.3 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "PaintWithVision_code.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2014.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.8.3/../../../../microblaze-xilinx-elf/bin/ld.exe: PaintWithVision_code.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_microblaze_0_local_memory_dlmb_bram_if_cntlr'
+c:/xilinx/sdk/2014.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/4.8.3/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_microblaze_0_local_memory_dlmb_bram_if_cntlr' overflowed by 66920 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [PaintWithVision_code.elf] Error 1
 
-18:18:46 Build Finished (took 564ms)
+11:58:53 Build Finished (took 3s.705ms)
 

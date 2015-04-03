@@ -105,7 +105,81 @@ design_1_microblaze_0_0 your_instance_name (
   .Dbg_Shift(Dbg_Shift),                  // input wire Dbg_Shift
   .Dbg_Capture(Dbg_Capture),              // input wire Dbg_Capture
   .Dbg_Update(Dbg_Update),                // input wire Dbg_Update
-  .Debug_Rst(Debug_Rst)                  // input wire Debug_Rst
+  .Debug_Rst(Debug_Rst),                  // input wire Debug_Rst
+  .M_AXI_IC_AWID(M_AXI_IC_AWID),          // output wire [0 : 0] M_AXI_IC_AWID
+  .M_AXI_IC_AWADDR(M_AXI_IC_AWADDR),      // output wire [31 : 0] M_AXI_IC_AWADDR
+  .M_AXI_IC_AWLEN(M_AXI_IC_AWLEN),        // output wire [7 : 0] M_AXI_IC_AWLEN
+  .M_AXI_IC_AWSIZE(M_AXI_IC_AWSIZE),      // output wire [2 : 0] M_AXI_IC_AWSIZE
+  .M_AXI_IC_AWBURST(M_AXI_IC_AWBURST),    // output wire [1 : 0] M_AXI_IC_AWBURST
+  .M_AXI_IC_AWLOCK(M_AXI_IC_AWLOCK),      // output wire M_AXI_IC_AWLOCK
+  .M_AXI_IC_AWCACHE(M_AXI_IC_AWCACHE),    // output wire [3 : 0] M_AXI_IC_AWCACHE
+  .M_AXI_IC_AWPROT(M_AXI_IC_AWPROT),      // output wire [2 : 0] M_AXI_IC_AWPROT
+  .M_AXI_IC_AWQOS(M_AXI_IC_AWQOS),        // output wire [3 : 0] M_AXI_IC_AWQOS
+  .M_AXI_IC_AWVALID(M_AXI_IC_AWVALID),    // output wire M_AXI_IC_AWVALID
+  .M_AXI_IC_AWREADY(M_AXI_IC_AWREADY),    // input wire M_AXI_IC_AWREADY
+  .M_AXI_IC_WDATA(M_AXI_IC_WDATA),        // output wire [31 : 0] M_AXI_IC_WDATA
+  .M_AXI_IC_WSTRB(M_AXI_IC_WSTRB),        // output wire [3 : 0] M_AXI_IC_WSTRB
+  .M_AXI_IC_WLAST(M_AXI_IC_WLAST),        // output wire M_AXI_IC_WLAST
+  .M_AXI_IC_WVALID(M_AXI_IC_WVALID),      // output wire M_AXI_IC_WVALID
+  .M_AXI_IC_WREADY(M_AXI_IC_WREADY),      // input wire M_AXI_IC_WREADY
+  .M_AXI_IC_BID(M_AXI_IC_BID),            // input wire [0 : 0] M_AXI_IC_BID
+  .M_AXI_IC_BRESP(M_AXI_IC_BRESP),        // input wire [1 : 0] M_AXI_IC_BRESP
+  .M_AXI_IC_BVALID(M_AXI_IC_BVALID),      // input wire M_AXI_IC_BVALID
+  .M_AXI_IC_BREADY(M_AXI_IC_BREADY),      // output wire M_AXI_IC_BREADY
+  .M_AXI_IC_ARID(M_AXI_IC_ARID),          // output wire [0 : 0] M_AXI_IC_ARID
+  .M_AXI_IC_ARADDR(M_AXI_IC_ARADDR),      // output wire [31 : 0] M_AXI_IC_ARADDR
+  .M_AXI_IC_ARLEN(M_AXI_IC_ARLEN),        // output wire [7 : 0] M_AXI_IC_ARLEN
+  .M_AXI_IC_ARSIZE(M_AXI_IC_ARSIZE),      // output wire [2 : 0] M_AXI_IC_ARSIZE
+  .M_AXI_IC_ARBURST(M_AXI_IC_ARBURST),    // output wire [1 : 0] M_AXI_IC_ARBURST
+  .M_AXI_IC_ARLOCK(M_AXI_IC_ARLOCK),      // output wire M_AXI_IC_ARLOCK
+  .M_AXI_IC_ARCACHE(M_AXI_IC_ARCACHE),    // output wire [3 : 0] M_AXI_IC_ARCACHE
+  .M_AXI_IC_ARPROT(M_AXI_IC_ARPROT),      // output wire [2 : 0] M_AXI_IC_ARPROT
+  .M_AXI_IC_ARQOS(M_AXI_IC_ARQOS),        // output wire [3 : 0] M_AXI_IC_ARQOS
+  .M_AXI_IC_ARVALID(M_AXI_IC_ARVALID),    // output wire M_AXI_IC_ARVALID
+  .M_AXI_IC_ARREADY(M_AXI_IC_ARREADY),    // input wire M_AXI_IC_ARREADY
+  .M_AXI_IC_RID(M_AXI_IC_RID),            // input wire [0 : 0] M_AXI_IC_RID
+  .M_AXI_IC_RDATA(M_AXI_IC_RDATA),        // input wire [31 : 0] M_AXI_IC_RDATA
+  .M_AXI_IC_RRESP(M_AXI_IC_RRESP),        // input wire [1 : 0] M_AXI_IC_RRESP
+  .M_AXI_IC_RLAST(M_AXI_IC_RLAST),        // input wire M_AXI_IC_RLAST
+  .M_AXI_IC_RVALID(M_AXI_IC_RVALID),      // input wire M_AXI_IC_RVALID
+  .M_AXI_IC_RREADY(M_AXI_IC_RREADY),      // output wire M_AXI_IC_RREADY
+  .M_AXI_DC_AWID(M_AXI_DC_AWID),          // output wire [0 : 0] M_AXI_DC_AWID
+  .M_AXI_DC_AWADDR(M_AXI_DC_AWADDR),      // output wire [31 : 0] M_AXI_DC_AWADDR
+  .M_AXI_DC_AWLEN(M_AXI_DC_AWLEN),        // output wire [7 : 0] M_AXI_DC_AWLEN
+  .M_AXI_DC_AWSIZE(M_AXI_DC_AWSIZE),      // output wire [2 : 0] M_AXI_DC_AWSIZE
+  .M_AXI_DC_AWBURST(M_AXI_DC_AWBURST),    // output wire [1 : 0] M_AXI_DC_AWBURST
+  .M_AXI_DC_AWLOCK(M_AXI_DC_AWLOCK),      // output wire M_AXI_DC_AWLOCK
+  .M_AXI_DC_AWCACHE(M_AXI_DC_AWCACHE),    // output wire [3 : 0] M_AXI_DC_AWCACHE
+  .M_AXI_DC_AWPROT(M_AXI_DC_AWPROT),      // output wire [2 : 0] M_AXI_DC_AWPROT
+  .M_AXI_DC_AWQOS(M_AXI_DC_AWQOS),        // output wire [3 : 0] M_AXI_DC_AWQOS
+  .M_AXI_DC_AWVALID(M_AXI_DC_AWVALID),    // output wire M_AXI_DC_AWVALID
+  .M_AXI_DC_AWREADY(M_AXI_DC_AWREADY),    // input wire M_AXI_DC_AWREADY
+  .M_AXI_DC_WDATA(M_AXI_DC_WDATA),        // output wire [31 : 0] M_AXI_DC_WDATA
+  .M_AXI_DC_WSTRB(M_AXI_DC_WSTRB),        // output wire [3 : 0] M_AXI_DC_WSTRB
+  .M_AXI_DC_WLAST(M_AXI_DC_WLAST),        // output wire M_AXI_DC_WLAST
+  .M_AXI_DC_WVALID(M_AXI_DC_WVALID),      // output wire M_AXI_DC_WVALID
+  .M_AXI_DC_WREADY(M_AXI_DC_WREADY),      // input wire M_AXI_DC_WREADY
+  .M_AXI_DC_BRESP(M_AXI_DC_BRESP),        // input wire [1 : 0] M_AXI_DC_BRESP
+  .M_AXI_DC_BID(M_AXI_DC_BID),            // input wire [0 : 0] M_AXI_DC_BID
+  .M_AXI_DC_BVALID(M_AXI_DC_BVALID),      // input wire M_AXI_DC_BVALID
+  .M_AXI_DC_BREADY(M_AXI_DC_BREADY),      // output wire M_AXI_DC_BREADY
+  .M_AXI_DC_ARID(M_AXI_DC_ARID),          // output wire [0 : 0] M_AXI_DC_ARID
+  .M_AXI_DC_ARADDR(M_AXI_DC_ARADDR),      // output wire [31 : 0] M_AXI_DC_ARADDR
+  .M_AXI_DC_ARLEN(M_AXI_DC_ARLEN),        // output wire [7 : 0] M_AXI_DC_ARLEN
+  .M_AXI_DC_ARSIZE(M_AXI_DC_ARSIZE),      // output wire [2 : 0] M_AXI_DC_ARSIZE
+  .M_AXI_DC_ARBURST(M_AXI_DC_ARBURST),    // output wire [1 : 0] M_AXI_DC_ARBURST
+  .M_AXI_DC_ARLOCK(M_AXI_DC_ARLOCK),      // output wire M_AXI_DC_ARLOCK
+  .M_AXI_DC_ARCACHE(M_AXI_DC_ARCACHE),    // output wire [3 : 0] M_AXI_DC_ARCACHE
+  .M_AXI_DC_ARPROT(M_AXI_DC_ARPROT),      // output wire [2 : 0] M_AXI_DC_ARPROT
+  .M_AXI_DC_ARQOS(M_AXI_DC_ARQOS),        // output wire [3 : 0] M_AXI_DC_ARQOS
+  .M_AXI_DC_ARVALID(M_AXI_DC_ARVALID),    // output wire M_AXI_DC_ARVALID
+  .M_AXI_DC_ARREADY(M_AXI_DC_ARREADY),    // input wire M_AXI_DC_ARREADY
+  .M_AXI_DC_RID(M_AXI_DC_RID),            // input wire [0 : 0] M_AXI_DC_RID
+  .M_AXI_DC_RDATA(M_AXI_DC_RDATA),        // input wire [31 : 0] M_AXI_DC_RDATA
+  .M_AXI_DC_RRESP(M_AXI_DC_RRESP),        // input wire [1 : 0] M_AXI_DC_RRESP
+  .M_AXI_DC_RLAST(M_AXI_DC_RLAST),        // input wire M_AXI_DC_RLAST
+  .M_AXI_DC_RVALID(M_AXI_DC_RVALID),      // input wire M_AXI_DC_RVALID
+  .M_AXI_DC_RREADY(M_AXI_DC_RREADY)      // output wire M_AXI_DC_RREADY
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
